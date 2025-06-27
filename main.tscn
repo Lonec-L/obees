@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dphp6t6kaxx4h"]
+[gd_scene load_steps=4 format=3 uid="uid://dphp6t6kaxx4h"]
 
 [ext_resource type="PackedScene" uid="uid://bstgvy8sibf11" path="res://world.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c4u5f1i4yd76c" path="res://player.tscn" id="2_0xm2m"]
+[ext_resource type="AudioStream" uid="uid://lk7wl7g82r11" path="res://Assets/Audio/Oh! Bees! - Main_theme.mp3" id="3_h2yge"]
 
 [node name="game" type="Node3D"]
 
@@ -9,3 +10,7 @@
 
 [node name="player" parent="." instance=ExtResource("2_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.853759, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h2yge")
+autoplay = true
