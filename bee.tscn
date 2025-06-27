@@ -1,5 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://r0crhkmr33ed"]
+[gd_scene load_steps=4 format=3 uid="uid://x7igr55iafrb"]
 
 [ext_resource type="PackedScene" uid="uid://cuhnjh4oqoi2j" path="res://Assets/3D/Bee/bee.glb" id="1_rwncv"]
+[ext_resource type="Script" uid="uid://cnqb4xghu81nl" path="res://bee.gd" id="2_v5qog"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xww1r"]
+size = Vector3(8.23584, 3.71484, 1.81543)
 
 [node name="bee" instance=ExtResource("1_rwncv")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+script = ExtResource("2_v5qog")
+
+[node name="Area3D" type="Area3D" parent="." index="11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.362061, 1.35742, 0.0717773)
+shape = SubResource("BoxShape3D_xww1r")
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]
