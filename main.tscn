@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dphp6t6kaxx4h"]
+[gd_scene load_steps=5 format=3 uid="uid://dphp6t6kaxx4h"]
 
 [ext_resource type="PackedScene" uid="uid://bstgvy8sibf11" path="res://world.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c4u5f1i4yd76c" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://lk7wl7g82r11" path="res://Assets/Audio/Oh! Bees! - Main_theme.mp3" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dttxk2asvutja" path="res://StunMinigameUI.tscn" id="4_1bvp3"]
 
 [node name="game" type="Node3D"]
 
@@ -15,3 +16,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.453953, 0)
 stream = ExtResource("3_h2yge")
 autoplay = true
 parameters/looping = true
+
+[node name="StunMinigameUI" parent="." instance=ExtResource("4_1bvp3")]

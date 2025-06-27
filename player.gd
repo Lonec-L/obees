@@ -3,6 +3,7 @@ extends CharacterBody3D
 const SPEED = 10.0              # Constant forward speed
 const TURN_SPEED = 1.0         # How fast the player rotates (adjust as needed)
 var drift_strength = 0
+var movement_enabled: bool = true
 
 func _physics_process(delta):
 	# Rotate left/right using input
@@ -22,5 +23,11 @@ func _physics_process(delta):
 	
 	
 		
-
 	move_and_slide()
+	
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		if collision.get_collider().is_in_group("trees") && movement_enabled:
+			var ui = get_parent().get_node("StunMinigameUI")
+			ui.start_stun_minigame()
+			movement_enabled = false

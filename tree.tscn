@@ -4,7 +4,7 @@
 
 [sub_resource type="SphereMesh" id="SphereMesh_brfkd"]
 
-[node name="tree" type="StaticBody3D"]
+[node name="tree" type="StaticBody3D" groups=["trees"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_uc1xx")
