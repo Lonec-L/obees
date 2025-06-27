@@ -1,7 +1,7 @@
 extends Camera3D
 
 
-var offset_strength = 0
+var offset_strength = 0.1
 @export var max_side_offset := 3      # How far camera shifts during drift
 @export var follow_speed := 5.0         # How smoothly camera moves
 @onready var player = get_parent()
@@ -20,9 +20,9 @@ func _process(delta):
 	var side_direction = -(Input.get_action_strength("ui_left") - Input.get_action_strength("ui_right"))
 	
 	if drift_input == 0:
-		offset_strength = max(-offset_strength + 1.0 * delta, 0)
+		offset_strength = 0.2
 	elif offset_strength < 1:
-		offset_strength = min(offset_strength + 1.0 * delta, 1)
+		offset_strength = min((offset_strength * (1 + 2 * delta)), 2)
 
 	var target_position = transform.origin
 	
