@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ntngf0yq4iq"]
+
+[ext_resource type="Script" uid="uid://hylcw0eegtcx" path="res://bee_spawner.gd" id="1_m011p"]
+
+[node name="BeeSpawner" type="Node3D"]
+script = ExtResource("1_m011p")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

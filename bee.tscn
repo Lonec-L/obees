@@ -7,7 +7,7 @@
 size = Vector3(8.23584, 3.71484, 1.81543)
 
 [node name="bee" instance=ExtResource("1_rwncv")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, 0, 0)
 script = ExtResource("2_v5qog")
 
 [node name="Area3D" type="Area3D" parent="." index="11"]

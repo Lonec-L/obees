@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dphp6t6kaxx4h"]
+[gd_scene load_steps=7 format=3 uid="uid://dphp6t6kaxx4h"]
 
 [ext_resource type="PackedScene" uid="uid://bstgvy8sibf11" path="res://world.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c4u5f1i4yd76c" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://lk7wl7g82r11" path="res://Assets/Audio/Oh! Bees! - Main_theme.mp3" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dttxk2asvutja" path="res://StunMinigameUI.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://x7igr55iafrb" path="res://bee.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://ntngf0yq4iq" path="res://bee_spawner.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://x7igr55iafrb" path="res://bee.tscn" id="6_7mycd"]
 
 [node name="game" type="Node3D"]
 
@@ -21,29 +22,7 @@ parameters/looping = true
 [node name="StunMinigameUI" parent="." instance=ExtResource("4_1bvp3")]
 visible = false
 
-[node name="bee" parent="." instance=ExtResource("5_lquwl")]
-transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, -0.647396, 0.804682, -27.5755)
-
-[node name="bee2" parent="." instance=ExtResource("5_lquwl")]
-transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, -21.1695, 0.804682, -43.6939)
-
-[node name="bee3" parent="." instance=ExtResource("5_lquwl")]
-transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, -23.8319, 0.804682, -28.7702)
-
-[node name="bee4" parent="." instance=ExtResource("5_lquwl")]
-transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 9.93772, 0.804682, -16.0334)
-
-[node name="bee5" parent="." instance=ExtResource("5_lquwl")]
-transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, -25.4396, 0.804682, -19.0155)
-
-[node name="bee6" parent="." instance=ExtResource("5_lquwl")]
-transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 19.2307, 0.804682, -22.3852)
-
-[node name="bee7" parent="." instance=ExtResource("5_lquwl")]
-transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, -15.2688, 0.804682, -16.7553)
-
-[node name="bee8" parent="." instance=ExtResource("5_lquwl")]
-transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 20.8616, 0.804682, -0.0382404)
-
-[node name="bee9" parent="." instance=ExtResource("5_lquwl")]
-transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 20.8616, 0.804682, -0.0382404)
+[node name="BeeSpawner" parent="." instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.518738, -0.0424671, -0.354456)
+bee_scene = ExtResource("6_7mycd")
+spawn_interval = 3.0
