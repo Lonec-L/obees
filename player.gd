@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
-const SPEED = 5.0              # Constant forward speed
-const TURN_SPEED = 2.5         # How fast the player rotates (adjust as needed)
+const SPEED = 10.0              # Constant forward speed
+const TURN_SPEED = 2.0         # How fast the player rotates (adjust as needed)
 
 func _physics_process(delta):
 	# Rotate left/right using input
