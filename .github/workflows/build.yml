@@ -17,7 +17,7 @@ jobs:
     - name: Set up Godot
       uses: chickensoft-games/setup-godot@v1
       with:
-        version: 4.4.1
+        version: 4.4.1.stable.official
         use-mono: false
 
     - name: Create export directory
