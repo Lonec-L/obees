@@ -31,4 +31,6 @@ func end_minigame():
 	visible = false
 	var player = get_parent().get_node("player")
 	player.movement_enabled = true
+	var forward = -player.transform.basis.z.normalized()
+	player.global_transform.origin += forward * 3
 	# Call function in player to enable it's movement

@@ -6,6 +6,9 @@ var drift_strength = 0
 var movement_enabled: bool = true
 
 func _physics_process(delta):
+	
+	if !movement_enabled:
+		return
 	# Rotate left/right using input
 	var turn_input = Input.get_action_strength("ui_left") - Input.get_action_strength("ui_right")
 	var drift_input = Input.get_action_strength( "drift")

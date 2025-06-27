@@ -18,3 +18,4 @@ autoplay = true
 parameters/looping = true
 
 [node name="StunMinigameUI" parent="." instance=ExtResource("4_1bvp3")]
+visible = false
