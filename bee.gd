@@ -1,17 +1,26 @@
 extends Node3D
 
 var player = null
-var speed = 5
+@export var speed = 5
+@export var target_offset_range: float = 5.0
 
 var base_height: float
 var bob_amplitude: float = 0.5
 var bob_speed: float = 5
 var bob_offset: float = 0.0
+
+var target_offset: Vector3
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = get_parent().get_node("player")
 	base_height = global_transform.origin.y
 	bob_offset = randf() * PI * 2
+	
+	target_offset = Vector3(
+		randf_range(-target_offset_range, target_offset_range),
+		randf_range(0.5 * -target_offset_range, 0.5 * target_offset_range),
+		randf_range(-target_offset_range, target_offset_range)
+	)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float):

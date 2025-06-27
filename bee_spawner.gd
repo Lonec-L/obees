@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var bee_scene: PackedScene
-@export var spawn_radius = 10.0
+@export var spawn_radius = 30.0
 @export var spawn_interval = 2.0
 
 # Called when the node enters the scene tree for the first time.
