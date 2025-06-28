@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brixqm88k4cei"
-path.s3tc="res://.godot/imported/bush3_bark_albedo.png-dcc2ffda03459d1f2d36bca2375a923b.s3tc.ctex"
-path.etc2="res://.godot/imported/bush3_bark_albedo.png-dcc2ffda03459d1f2d36bca2375a923b.etc2.ctex"
+path.s3tc="res://.godot/imported/bush3_bark_albedo.png-83087981a9626e28be8cb0ae72d3c7b9.s3tc.ctex"
+path.etc2="res://.godot/imported/bush3_bark_albedo.png-83087981a9626e28be8cb0ae72d3c7b9.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/3D/bushes/bush3/bush3_bark_albedo.png"
-dest_files=["res://.godot/imported/bush3_bark_albedo.png-dcc2ffda03459d1f2d36bca2375a923b.s3tc.ctex", "res://.godot/imported/bush3_bark_albedo.png-dcc2ffda03459d1f2d36bca2375a923b.etc2.ctex"]
+source_file="res://Assets/3D/bushes/bush3/bush3_bark_albedo.png"
+dest_files=["res://.godot/imported/bush3_bark_albedo.png-83087981a9626e28be8cb0ae72d3c7b9.s3tc.ctex", "res://.godot/imported/bush3_bark_albedo.png-83087981a9626e28be8cb0ae72d3c7b9.etc2.ctex"]
 
 [params]
 

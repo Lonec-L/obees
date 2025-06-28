@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dubs5udccr7bm"
-path="res://.godot/imported/grasscutmiddle.glb-499d25e64067bb206a1177fedb8046ef.scn"
+path="res://.godot/imported/grasscutmiddle.glb-e376b8f53bfb62e03f9460b37c144f27.scn"
 
 [deps]
 
-source_file="res://assets/3D/Grass/grasscutmiddle.glb"
-dest_files=["res://.godot/imported/grasscutmiddle.glb-499d25e64067bb206a1177fedb8046ef.scn"]
+source_file="res://Assets/3D/Grass/grasscutmiddle.glb"
+dest_files=["res://.godot/imported/grasscutmiddle.glb-e376b8f53bfb62e03f9460b37c144f27.scn"]
 
 [params]
 

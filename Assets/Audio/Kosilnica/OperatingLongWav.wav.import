@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cj6s5hi7tx0oc"
-path="res://.godot/imported/OperatingLongWav.wav-3659e807c3ba302039a6de19095d27a1.sample"
+path="res://.godot/imported/OperatingLongWav.wav-bb4e896cb59ddca7efc88f21f052ec80.sample"
 
 [deps]
 
-source_file="res://assets/Audio/Kosilnica/OperatingLongWav.wav"
-dest_files=["res://.godot/imported/OperatingLongWav.wav-3659e807c3ba302039a6de19095d27a1.sample"]
+source_file="res://Assets/Audio/Kosilnica/OperatingLongWav.wav"
+dest_files=["res://.godot/imported/OperatingLongWav.wav-bb4e896cb59ddca7efc88f21f052ec80.sample"]
 
 [params]
 

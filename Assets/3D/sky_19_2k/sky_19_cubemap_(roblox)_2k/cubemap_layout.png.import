@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://68s6ds758d0o"
-path="res://.godot/imported/cubemap_layout.png-5fa2b23309ca5483ba0f9ce27bf4dcce.ctex"
+path="res://.godot/imported/cubemap_layout.png-f58e8ba8aaa5190a22196ced8acb7292.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/3D/sky_19_2k/sky_19_cubemap_(roblox)_2k/cubemap_layout.png"
-dest_files=["res://.godot/imported/cubemap_layout.png-5fa2b23309ca5483ba0f9ce27bf4dcce.ctex"]
+source_file="res://Assets/3D/sky_19_2k/sky_19_cubemap_(roblox)_2k/cubemap_layout.png"
+dest_files=["res://.godot/imported/cubemap_layout.png-f58e8ba8aaa5190a22196ced8acb7292.ctex"]
 
 [params]
 

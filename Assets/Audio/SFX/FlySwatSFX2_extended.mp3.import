@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://fqxgn483lewa"
-path="res://.godot/imported/FlySwatSFX2_extended.mp3-040ad43e24123e3ee1caaee8dcd19310.mp3str"
+path="res://.godot/imported/FlySwatSFX2_extended.mp3-6ba3c88de808a262f71e3448f33b91f6.mp3str"
 
 [deps]
 
-source_file="res://assets/Audio/SFX/FlySwatSFX2_extended.mp3"
-dest_files=["res://.godot/imported/FlySwatSFX2_extended.mp3-040ad43e24123e3ee1caaee8dcd19310.mp3str"]
+source_file="res://Assets/Audio/SFX/FlySwatSFX2_extended.mp3"
+dest_files=["res://.godot/imported/FlySwatSFX2_extended.mp3-6ba3c88de808a262f71e3448f33b91f6.mp3str"]
 
 [params]
 

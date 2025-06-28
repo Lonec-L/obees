@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kmjwltcomncg"
-path.s3tc="res://.godot/imported/bush2_bark_normal.png-6915c3d3385de1b9e119bd7ba5890f95.s3tc.ctex"
-path.etc2="res://.godot/imported/bush2_bark_normal.png-6915c3d3385de1b9e119bd7ba5890f95.etc2.ctex"
+path.s3tc="res://.godot/imported/bush2_bark_normal.png-9b1b4e5309faa3dc49cbca270812db61.s3tc.ctex"
+path.etc2="res://.godot/imported/bush2_bark_normal.png-9b1b4e5309faa3dc49cbca270812db61.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/3D/bushes/bush2/bush2_bark_normal.png"
-dest_files=["res://.godot/imported/bush2_bark_normal.png-6915c3d3385de1b9e119bd7ba5890f95.s3tc.ctex", "res://.godot/imported/bush2_bark_normal.png-6915c3d3385de1b9e119bd7ba5890f95.etc2.ctex"]
+source_file="res://Assets/3D/bushes/bush2/bush2_bark_normal.png"
+dest_files=["res://.godot/imported/bush2_bark_normal.png-9b1b4e5309faa3dc49cbca270812db61.s3tc.ctex", "res://.godot/imported/bush2_bark_normal.png-9b1b4e5309faa3dc49cbca270812db61.etc2.ctex"]
 
 [params]
 

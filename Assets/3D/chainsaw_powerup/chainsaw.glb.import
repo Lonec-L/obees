@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://buvj0q40ufpxe"
-path="res://.godot/imported/chainsaw.glb-ec84629c9eb2d47388302fb1a8cf942e.scn"
+path="res://.godot/imported/chainsaw.glb-acbf42cf4d8f41f5c67384c385b4ec3a.scn"
 
 [deps]
 
-source_file="res://assets/3D/chainsaw_powerup/chainsaw.glb"
-dest_files=["res://.godot/imported/chainsaw.glb-ec84629c9eb2d47388302fb1a8cf942e.scn"]
+source_file="res://Assets/3D/chainsaw_powerup/chainsaw.glb"
+dest_files=["res://.godot/imported/chainsaw.glb-acbf42cf4d8f41f5c67384c385b4ec3a.scn"]
 
 [params]
 

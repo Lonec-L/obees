@@ -9,6 +9,8 @@ var has_chainsaw = false
 @onready var chainsaw_timer: Timer = $chainsaw_timer
 @export var mg_scene: PackedScene
 
+var isAlive = true
+
 @onready var gruntingSFXPlayer: AudioStreamPlayer
 @onready var beeSwattingSFXPlayer: AudioStreamPlayer
 
@@ -96,5 +98,7 @@ func _on_area_3d_body_entered(body):
 
 
 func _on_area_3d_body_entered_for_bees(body: Node3D) -> void:
-	if body.is_in_group("Bees"):
-		gruntingSFXPlayer.scared()
+	if body.is_in_group("Bees") && isAlive:
+		# gruntingSFXPlayer.scared()
+		print("YOU DEEEEED")
+		isAlive = false

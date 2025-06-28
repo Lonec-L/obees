@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c68cf1krtot6p"
-path="res://.godot/imported/grasslowpoly.glb-704d37b30d514889dad2a56abea2f129.scn"
+path="res://.godot/imported/grasslowpoly.glb-9873bfa1b14c7c91c0ac3e5c83407586.scn"
 
 [deps]
 
-source_file="res://assets/3D/Grass/grasslowpoly.glb"
-dest_files=["res://.godot/imported/grasslowpoly.glb-704d37b30d514889dad2a56abea2f129.scn"]
+source_file="res://Assets/3D/Grass/grasslowpoly.glb"
+dest_files=["res://.godot/imported/grasslowpoly.glb-9873bfa1b14c7c91c0ac3e5c83407586.scn"]
 
 [params]
 

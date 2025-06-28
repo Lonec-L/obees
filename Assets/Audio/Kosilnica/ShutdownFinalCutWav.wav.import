@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://n74a3hv7a8fm"
-path="res://.godot/imported/ShutdownFinalCutWav.wav-03865395ead95a1d570cdfd08cf172a5.sample"
+path="res://.godot/imported/ShutdownFinalCutWav.wav-a0c6e6150fec9ea06ea1c89a310266ae.sample"
 
 [deps]
 
-source_file="res://assets/Audio/Kosilnica/ShutdownFinalCutWav.wav"
-dest_files=["res://.godot/imported/ShutdownFinalCutWav.wav-03865395ead95a1d570cdfd08cf172a5.sample"]
+source_file="res://Assets/Audio/Kosilnica/ShutdownFinalCutWav.wav"
+dest_files=["res://.godot/imported/ShutdownFinalCutWav.wav-a0c6e6150fec9ea06ea1c89a310266ae.sample"]
 
 [params]
 
