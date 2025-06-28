@@ -1,6 +1,7 @@
 extends Node3D
 
 var player = null
+var is_dead = false
 @export var speed = 10
 @export var target_offset_range: float = 5.0
 @export var turn_speed: float = 2.5
@@ -65,11 +66,12 @@ func _physics_process(delta: float):
 		var current_forward = -global_transform.basis.z.normalized()
 		var desired_direction = (look_target - global_transform.origin).normalized()
 
-		var new_direction = current_forward.lerp(desired_direction, clamp(turn_speed * delta, 0.0, 1.0)).normalized()
-		look_at(global_transform.origin + new_direction, Vector3.UP)
-		# Optional: rotate_y if needed to fix model facing direction
-		#rotate_y(deg_to_rad(90))
-		global_translate(new_direction * speed * delta)
+		if is_dead == false:
+			var new_direction = current_forward.lerp(desired_direction, clamp(turn_speed * delta, 0.0, 1.0)).normalized()
+			look_at(global_transform.origin + new_direction, Vector3.UP)
+			# Optional: rotate_y if needed to fix model facing direction
+			#rotate_y(deg_to_rad(90))
+			global_translate(new_direction * speed * delta)
 
 
 func _on_area_3d_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
@@ -77,5 +79,12 @@ func _on_area_3d_input_event(camera: Node, event: InputEvent, event_position: Ve
 		if global_transform.origin.distance_to(player.global_transform.origin) <= 20:
 			print("Attacked the B")
 			var player = get_node("../player")
+			is_dead = true
 			player.extend_arm(global_transform.origin)
-			queue_free()
+			$AnimationPlayer.play("death")
+			$Timer.start()
+			
+
+
+func _on_timer_timeout() -> void:
+	queue_free()
