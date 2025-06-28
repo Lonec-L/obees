@@ -12,7 +12,19 @@ var bob_offset: float = 0.0
 
 var target_offset: Vector3
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+
+@onready var bee_sfx: AudioStreamPlayer3D = $AudioStreamPlayer3D
+
+var beeSwatSounds = [
+	load("res://Assets/Audio/SFX/BzzSFX1.mp3"),
+	load("res://Assets/Audio/SFX/BzzSFX2.mp3"),
+	load("res://Assets/Audio/SFX/BzzSFX3.mp3")
+]
+
+func _ready() -> void:	
+	randomize()
+	bee_sfx.stream = beeSwatSounds[randi() % beeSwatSounds.size()]
+	bee_sfx.play()
 	player = get_parent().get_node("player")
 	bob_offset = randf() * PI * 2
 	

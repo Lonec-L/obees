@@ -1,10 +1,11 @@
-[gd_scene load_steps=48 format=4 uid="uid://x7igr55iafrb"]
+[gd_scene load_steps=49 format=4 uid="uid://x7igr55iafrb"]
 
 [ext_resource type="Script" uid="uid://cnqb4xghu81nl" path="res://bee.gd" id="2_v5qog"]
 [ext_resource type="Material" uid="uid://bdb1hmefl1fsy" path="res://Assets/3D/Bee/black.tres" id="3_sdpr3"]
 [ext_resource type="Texture2D" uid="uid://bvk5xrdf1rg3n" path="res://Assets/3D/Bee/wingtex.res" id="4_sgn7r"]
 [ext_resource type="FastNoiseLite" uid="uid://ckspq16oh5o6j" path="res://Assets/3D/Bee/new_fast_noise_lite.tres" id="5_y8nj2"]
 [ext_resource type="Material" uid="uid://bo3abpk20y5p3" path="res://Assets/3D/Bee/bee.material" id="6_jalfw"]
+[ext_resource type="AudioStream" uid="uid://c3mnludq4h2lt" path="res://Assets/Audio/SFX/BzzSFX1.mp3" id="6_sdpr3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xww1r"]
 size = Vector3(4, 5, 4)
@@ -721,6 +722,10 @@ speed_scale = 2.0
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_sdpr3")
+bus = &"Screams"
 
 [connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

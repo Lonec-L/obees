@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ntngf0yq4iq" path="res://bee_spawner.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://x7igr55iafrb" path="res://bee.tscn" id="6_7mycd"]
 [ext_resource type="Script" uid="uid://ck86d22726due" path="res://eurgh_audio_player.gd" id="7_kek77"]
-[ext_resource type="Script" uid="uid://d1roej5jq15rx" path="res://bee_swating_sfx_player_2.gd" id="8_4c57u"]
+[ext_resource type="Script" uid="uid://deem4d306708f" path="res://bee_swating_sfx_player_2.gd" id="8_4c57u"]
 [ext_resource type="Script" uid="uid://dh0rgueqe5psd" path="res://Scripts/lawn_mowing_player.gd" id="10_efxa6"]
 
 [node name="game" type="Node3D"]
