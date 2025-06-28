@@ -11,6 +11,7 @@ func _ready() -> void:
 
 func _on_timer_timeout() -> void:
 	var bee = bee_scene.instantiate()
+	bee.speed = 12
 	get_tree().current_scene.add_child(bee)
 	bee.global_transform.origin = Vector3(
 		randf_range(-spawn_radius, spawn_radius),

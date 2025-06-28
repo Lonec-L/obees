@@ -1,8 +1,9 @@
 extends Node3D
 
 var player = null
-@export var speed = 5
+@export var speed = 10
 @export var target_offset_range: float = 5.0
+@export var turn_speed: float = 2.5
 
 @export var base_height: float = randf_range(1.5,2.5)
 var bob_amplitude: float = 0.5
@@ -28,11 +29,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float):
 	if player:
-		# Move horizontally towards player
-		var direction = (player.global_transform.origin - global_transform.origin)
-		direction.y = 0  # Ignore vertical for horizontal movement
-		direction = direction.normalized()
-		global_translate(direction * speed * delta)
 
 		# Bobbing on Y axis using time from OS.get_ticks_msec()
 		var time_sec = Time.get_ticks_msec() / 1000.0
@@ -46,10 +42,14 @@ func _physics_process(delta: float):
 		# Look at player horizontally
 		var look_target = player.global_transform.origin
 		look_target.y = global_transform.origin.y  # Keep horizontal look only
-		look_at(look_target, Vector3.UP)
+		var current_forward = -global_transform.basis.z.normalized()
+		var desired_direction = (look_target - global_transform.origin).normalized()
 
+		var new_direction = current_forward.lerp(desired_direction, clamp(turn_speed * delta, 0.0, 1.0)).normalized()
+		look_at(global_transform.origin + new_direction, Vector3.UP)
 		# Optional: rotate_y if needed to fix model facing direction
-		rotate_y(deg_to_rad(90))
+		#rotate_y(deg_to_rad(90))
+		global_translate(new_direction * speed * delta)
 
 
 func _on_area_3d_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
