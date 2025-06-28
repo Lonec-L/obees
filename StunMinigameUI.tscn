@@ -1,8 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://dttxk2asvutja"]
+[gd_scene load_steps=5 format=3 uid="uid://dttxk2asvutja"]
 
 [ext_resource type="Script" uid="uid://im5esorwajn5" path="res://stun_minigame_ui.gd" id="1_voq03"]
 
 [sub_resource type="Theme" id="Theme_voq03"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_voq03"]
+bg_color = Color(0, 0.646209, 0.0704966, 1)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(1, 0.28883, 0.106626, 1)
+border_blend = true
+shadow_color = Color(0.92222, 0.544359, 0, 0.6)
+shadow_size = 315
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ceuk8"]
+bg_color = Color(1, 0.350351, 0.200606, 1)
+shadow_color = Color(0.92315, 0.273956, 0, 0.6)
+shadow_size = 315
 
 [node name="StunMinigameUI" type="CanvasLayer"]
 script = ExtResource("1_voq03")
@@ -28,3 +44,5 @@ autowrap_mode = 2
 [node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 121
+theme_override_styles/background = SubResource("StyleBoxFlat_voq03")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ceuk8")

@@ -8,6 +8,7 @@ var isActive = false
 var currentProgress = 0
 var maxProgress = 100
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	progress_bar.value = currentProgress
