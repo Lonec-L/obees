@@ -6,6 +6,8 @@ var drift_strength = 0
 var movement_enabled: bool = true
 var _last_drift_dir = 0
 
+@export var mg_scene: PackedScene
+
 func _physics_process(delta):
 	
 	if !movement_enabled:
@@ -35,6 +37,7 @@ func _physics_process(delta):
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
 		if collision.get_collider().is_in_group("gTrees") && movement_enabled:
-			var ui = get_parent().get_node("StunMinigameUI")
+			var ui = mg_scene.instantiate()
+			add_child(ui)
 			ui.start_stun_minigame()
 			movement_enabled = false

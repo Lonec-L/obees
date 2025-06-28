@@ -11,6 +11,8 @@ var maxProgress = 100
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	var player = get_parent()
+	player.rotation.y += delta
 	progress_bar.value = currentProgress
 	currentProgress -= delta * 10
 	currentProgress = clamp(currentProgress, 0, maxProgress)
@@ -30,8 +32,9 @@ func start_stun_minigame():
 func end_minigame():
 	isActive = false
 	visible = false
-	var player = get_parent().get_node("player")
+	var player = get_parent()
 	player.movement_enabled = true
 	var forward = -player.transform.basis.z.normalized()
-	player.global_transform.origin += forward * 3
+	player.global_transform.origin += forward
+	queue_free()
 	# Call function in player to enable it's movement

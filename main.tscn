@@ -14,14 +14,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0175858, -9.53674e-07, -0.1
 
 [node name="player" parent="." groups=["player"] instance=ExtResource("2_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16415, 0)
+mg_scene = ExtResource("4_1bvp3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h2yge")
 autoplay = true
 parameters/looping = true
-
-[node name="StunMinigameUI" parent="." instance=ExtResource("4_1bvp3")]
-visible = false
 
 [node name="BeeSpawner" parent="." instance=ExtResource("5_lquwl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.518738, -0.0424671, -0.354456)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr8xdj3oqnfrh"]
+
+[ext_resource type="PackedScene" uid="uid://dttxk2asvutja" path="res://StunMinigameUI.tscn" id="1_4bqly"]
+
+[node name="minigame" type="CanvasLayer"]
+
+[node name="StunMinigameUI" parent="." instance=ExtResource("1_4bqly")]
+visible = false

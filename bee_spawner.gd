@@ -14,7 +14,7 @@ func _on_timer_timeout() -> void:
 	get_tree().current_scene.add_child(bee)
 	bee.global_transform.origin = Vector3(
 		randf_range(-spawn_radius, spawn_radius),
-		5,
+		3,
 		randf_range(-spawn_radius, spawn_radius)
 	)
 	

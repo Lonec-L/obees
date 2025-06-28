@@ -4,7 +4,7 @@ var player = null
 @export var speed = 5
 @export var target_offset_range: float = 5.0
 
-@export var base_height: float = randf_range(2,3)
+@export var base_height: float = randf_range(1.5,2.5)
 var bob_amplitude: float = 0.5
 var bob_speed: float = 5
 var bob_offset: float = 0.0
