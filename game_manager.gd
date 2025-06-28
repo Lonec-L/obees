@@ -13,6 +13,8 @@ func _process(delta: float) -> void:
 
 func progress() -> void: 
 	count += 1
+	if count >= numberOfGrass:
+		get_tree().change_scene_to_file("res://scenes/credits/scrollable_credits.tscn")
 
 func set_number_of_grass(n: int) -> void:
 	numberOfGrass = n
