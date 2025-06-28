@@ -32,6 +32,11 @@ tallGrass=""
 gTrees=""
 player=""
 
+[gui]
+
+theme/custom="uid://veuqbv3t6834"
+theme/custom_font="res://Assets/Fonts/Boxy-Bold.ttef"
+
 [input]
 
 ui_left={
@@ -84,6 +89,7 @@ copy_path="res://"
 [rendering]
 
 textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(6.30513e-06, 0.530009, 0.0995827, 1)
 drift={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)

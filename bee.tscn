@@ -232,6 +232,7 @@ shadow_mesh = SubResource("ArrayMesh_bpxcf")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_072d8"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ld4o1"]
+resource_name = "bee_Plane_001"
 _surfaces = [{
 "aabb": AABB(2.03934, 0.699988, 0.132292, 0.430926, 0.79592, 0.474231),
 "format": 34359742465,
@@ -266,6 +267,7 @@ shadow_mesh = SubResource("ArrayMesh_ld4o1")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y3tgx"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_yg5to"]
+resource_name = "bee_Plane"
 _surfaces = [{
 "aabb": AABB(2.30399, 0.506255, -0.0172768, 0.336243, 0.385278, 0.385263),
 "format": 34359742465,
@@ -300,6 +302,7 @@ shadow_mesh = SubResource("ArrayMesh_yg5to")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_exm2c"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_e1843"]
+resource_name = "bee_Cylinder_007"
 _surfaces = [{
 "aabb": AABB(-1.28369, -0.206785, -0.678623, 3.15696, 1.22704, 1.35771),
 "format": 34896613377,
