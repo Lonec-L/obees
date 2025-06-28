@@ -5,7 +5,7 @@ extends RichTextLabel
 const HEADING_STRING_REPLACEMENT = "$1[font_size=%d]$2[/font_size]"
 const BOLD_HEADING_STRING_REPLACEMENT = "$1[b][font_size=%d]$2[/font_size][/b]"
 
-@export_file("*.md") var attribution_file_path: String
+@export_file("res://ATTRIBUTION.md") var attribution_file_path: String
 @export var auto_update : bool = true
 @export_group("Font Sizes")
 @export var h1_font_size: int
