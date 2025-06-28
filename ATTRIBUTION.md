@@ -20,8 +20,6 @@ Matjaz Jenus
 
 Maj Alter
 
-[Person w/ Link]()  
-
 ### Godot Engine Logo
 Author: Andrea Calabro  
 Source: [godotengine.org : press](https://godotengine.org/press/)  
