@@ -21,12 +21,14 @@ mg_scene = ExtResource("4_1bvp3")
 
 [node name="LawnMowingPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h2yge")
+bus = &"LawnMower"
 script = ExtResource("10_efxa6")
 
 [node name="BGMusicPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h2yge")
 volume_db = 1.0
 autoplay = true
+bus = &"BGM"
 parameters/looping = true
 
 [node name="EUGH&Grunt&scaredPlayer2" type="AudioStreamPlayer" parent="."]
