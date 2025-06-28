@@ -12,7 +12,7 @@ extends Node3D
 
 @export var tree_scale: float = 0.3
 
-@export var area_size: int = 100
+@export var area_size: int = 300
 @export var spacing: int = 2
 @export var noise_threshold: float = 0.5
 
