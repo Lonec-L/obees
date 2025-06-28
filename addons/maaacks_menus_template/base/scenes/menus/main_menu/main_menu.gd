@@ -47,6 +47,7 @@ func _hide_exit_for_web() -> void:
 		%ExitButton.hide()
 
 func _hide_new_game_if_unset() -> void:
+	%CreditsButton.hide()
 	if game_scene_path.is_empty():
 		%NewGameButton.hide()
 
