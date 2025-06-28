@@ -8,10 +8,12 @@ extends Node3D
 @export var bush2: PackedScene
 @export var bush3: PackedScene
 
+@export var grass: PackedScene
+
 @export var tree_scale: float = 0.3
 
-@export var area_size: int = 300
-@export var spacing: int = 3
+@export var area_size: int = 100
+@export var spacing: int = 2
 @export var noise_threshold: float = 0.5
 
 var noise := FastNoiseLite.new()
@@ -25,8 +27,15 @@ func spawn_tree_at(pos: Vector3) -> void:
 	tree_instance.rotation_degrees.y = randf() * 360
 	tree_instance.scale *= Vector3(tree_scale,tree_scale,tree_scale) * (0.8 + 0.4*randf())
 	add_child(tree_instance)
+	
+func spawn_grass_at(pos: Vector3) -> void:
+	var grass_instance = grass.instantiate()
+	grass_instance.position = pos
+	grass_instance.scale = Vector3(0.1,0.1,0.1)
+	add_child(grass_instance)
 
 func _ready():
+	var y = 0
 	noise.seed = randi()
 	noise.frequency = 0.5
 	noise.noise_type = FastNoiseLite.TYPE_SIMPLEX
@@ -39,8 +48,10 @@ func _ready():
 			var value = noise.get_noise_2d(world_x, world_z)  # Range: [-1, 1]
 
 			if value > noise_threshold:
-				var y = 0  # Replace with terrain height if needed
+				  # Replace with terrain height if needed
 				spawn_tree_at(Vector3(world_x, y, world_z))
+			else:
+				spawn_grass_at(Vector3(world_x, y, world_z))
 
 
 

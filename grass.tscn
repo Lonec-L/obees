@@ -1,6 +1,8 @@
-[gd_scene load_steps=143 format=4 uid="uid://c337r35elasa2"]
+[gd_scene load_steps=146 format=4 uid="uid://bh31cm3oqyb42"]
 
+[ext_resource type="Script" uid="uid://c0d5yqqcil21r" path="res://grass.gd" id="1_mw2ei"]
 [ext_resource type="Material" uid="uid://34a8o6f1phvn" path="res://Assets/3D/Grass/grass.material" id="1_ogb4j"]
+[ext_resource type="PackedScene" uid="uid://h4hvelnxb37h" path="res://grasscut.tscn" id="2_2qnaq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gsmji"]
 resource_name = "Grass1"
@@ -2327,7 +2329,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ewlka")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kl2qe"]
+size = Vector3(20, 5, 20)
+
 [node name="grass" type="Node3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+script = ExtResource("1_mw2ei")
+short_grass_scene = ExtResource("2_2qnaq")
 
 [node name="Blade1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.169902, 0.766397, 0, -0.0823222, 1.58174, 0, 0, 0, 1, 1.64854, 1.62715, 1.09818)
@@ -2748,3 +2756,12 @@ transform = Transform3D(0.0435544, 0.200812, 0.634318, -0.0433376, 1.21516, -0.0
 mesh = SubResource("ArrayMesh_wjjyp")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_ogb4j")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17055, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.23496, 0)
+shape = SubResource("BoxShape3D_kl2qe")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
