@@ -1,6 +1,6 @@
-[gd_scene load_steps=47 format=4 uid="uid://x7igr55iafrb"]
+[gd_scene load_steps=48 format=4 uid="uid://x7igr55iafrb"]
 
-[ext_resource type="Script" uid="uid://cnqb4xghu81nl" path="res://bee.gd" id="2_v5qog"]
+[ext_resource type="Script" path="res://bee.gd" id="2_v5qog"]
 [ext_resource type="Material" uid="uid://bdb1hmefl1fsy" path="res://Assets/3D/Bee/black.tres" id="3_sdpr3"]
 [ext_resource type="Texture2D" uid="uid://bvk5xrdf1rg3n" path="res://Assets/3D/Bee/wingtex.res" id="4_sgn7r"]
 [ext_resource type="FastNoiseLite" uid="uid://ckspq16oh5o6j" path="res://Assets/3D/Bee/new_fast_noise_lite.tres" id="5_y8nj2"]
@@ -406,6 +406,78 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, -0.0734609)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Area3D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape3D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.0673612, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape3D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -1.5708)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node3D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node3D:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_b1nx6"]
 resource_name = "flap_flap"
@@ -437,18 +509,92 @@ tracks/1/keys = {
 "values": [Vector3(0, 0, -0.0734609), Vector3(0, 0, -0.654359), Vector3(0, 0, 0.152106), Vector3(0, 0.429107, 0.348563), Vector3(0, 0, 0.152106), Vector3(0, 0, -0.0734609)]
 }
 
+[sub_resource type="Animation" id="Animation_7e6nk"]
+resource_name = "death"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.710442, -0.0160847), Vector3(0, -1.59681, -0.00150102)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(2.34303, 0, 0), Vector3(3.07469, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.0673612, 0), Vector3(0, -0.757443, 0.0321695), Vector3(0, -1.66402, 0.00300197)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape3D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -1.5708), Vector3(0.798558, -3.14159, 1.5708), Vector3(0.0668984, 3.14159, 1.5708)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node3D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.710442, -0.0160847), Vector3(0, -1.59681, -0.00150102)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node3D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(-3.13127e-08, 1.5708, 2.34303), Vector3(2.71418e-08, 1.5708, 3.07469)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sgn7r"]
 _data = {
-&"RESET": SubResource("Animation_sdpr3"),
-&"flap_flap": SubResource("Animation_b1nx6")
+"RESET": SubResource("Animation_sdpr3"),
+"death": SubResource("Animation_7e6nk"),
+"flap_flap": SubResource("Animation_b1nx6")
 }
 
 [node name="bee" type="RigidBody3D"]
 gravity_scale = 0.0
 script = ExtResource("2_v5qog")
-speed = null
-target_offset_range = null
-turn_speed = null
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, 0, 0)
@@ -459,7 +605,7 @@ shape = SubResource("BoxShape3D_xww1r")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 process_priority = 1
-transform = Transform3D(-1.49012e-08, 1, 0, -1, -1.49012e-08, 0, 0, 0, 1, 0, 0.0673612, 0)
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0.0673612, 0)
 shape = SubResource("CapsuleShape3D_xww1r")
 
 [node name="Node3D" type="Node3D" parent="."]
@@ -569,8 +715,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_awyb5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_sgn7r")
+"": SubResource("AnimationLibrary_sgn7r")
 }
 speed_scale = 2.0
 
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
