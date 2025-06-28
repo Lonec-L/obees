@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bstgvy8sibf11"]
+[gd_scene load_steps=7 format=3 uid="uid://bstgvy8sibf11"]
 
-[ext_resource type="PackedScene" uid="uid://cdtiwviuuck3b" path="res://tree.tscn" id="1_f3sb7"]
+[ext_resource type="Script" uid="uid://ecw2laprvp06" path="res://tree_spawner.gd" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://cneahpkhyi55s" path="res://tree1.tscn" id="3_036b0"]
+[ext_resource type="PackedScene" uid="uid://dvmwwr8f8hcmk" path="res://tree_2.tscn" id="4_dwbse"]
+[ext_resource type="PackedScene" uid="uid://bonddkl5rpv5" path="res://tree_3.tscn" id="5_pkg7o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
 size = Vector3(60, 1, 60)
@@ -24,19 +27,8 @@ mesh = SubResource("BoxMesh_f3sb7")
 transform = Transform3D(0.771625, -0.514644, 0.373814, 0, 0.587686, 0.809089, -0.636078, -0.624313, 0.453473, 0, 7.01116, 0)
 shadow_enabled = true
 
-[node name="children" type="Node3D" parent="."]
-
-[node name="tree" parent="children" instance=ExtResource("1_f3sb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2194, 0.447939, -13.9066)
-
-[node name="tree2" parent="children" instance=ExtResource("1_f3sb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2089, 0.447939, -9.48299)
-
-[node name="tree3" parent="children" instance=ExtResource("1_f3sb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.38829, 0.447939, 14.7166)
-
-[node name="tree4" parent="children" instance=ExtResource("1_f3sb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07405, 0.447939, 4.73222)
-
-[node name="tree5" parent="children" instance=ExtResource("1_f3sb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2984, 0.447939, 10.4339)
+[node name="treeSpawner" type="Node3D" parent="."]
+script = ExtResource("2_fj7yv")
+tree1 = ExtResource("3_036b0")
+tree2 = ExtResource("4_dwbse")
+tree3 = ExtResource("5_pkg7o")

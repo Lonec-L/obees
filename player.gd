@@ -30,7 +30,7 @@ func _physics_process(delta):
 	
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
-		if collision.get_collider().is_in_group("trees") && movement_enabled:
+		if collision.get_collider().is_in_group("gTrees") && movement_enabled:
 			var ui = get_parent().get_node("StunMinigameUI")
 			ui.start_stun_minigame()
 			movement_enabled = false
