@@ -1,16 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://bh31cm3oqyb42"]
 
 [ext_resource type="Script" uid="uid://c0d5yqqcil21r" path="res://grass.gd" id="1_mw2ei"]
-[ext_resource type="PackedScene" uid="uid://h4hvelnxb37h" path="res://grasscut.tscn" id="2_2qnaq"]
+[ext_resource type="PackedScene" uid="uid://do2g45paq2120" path="res://grasscutmiddle.tscn" id="2_2qnaq"]
 [ext_resource type="PackedScene" uid="uid://c68cf1krtot6p" path="res://Assets/3D/Grass/grasslowpoly.glb" id="3_2qnaq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kl2qe"]
 size = Vector3(20, 5, 20)
 
 [node name="grass" type="Node3D"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.1, 0)
 script = ExtResource("1_mw2ei")
-short_grass_scene = ExtResource("2_2qnaq")
+mid_grass_scene = ExtResource("2_2qnaq")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17055, 0)
