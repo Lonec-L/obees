@@ -9,6 +9,7 @@ extends Node3D
 @export var bush3: PackedScene
 
 @export var grass: PackedScene
+@onready var game_manager: Node2D = $"../GameManager"
 
 @export var tree_scale: float = 0.3
 
@@ -19,6 +20,8 @@ extends Node3D
 @export var starting_area: int = 20
 
 var noise := FastNoiseLite.new()
+
+var numberOfGrass = 0
 
 func spawn_tree_at(pos: Vector3) -> void:
 	var tree_options = [tree1, tree2, tree3, bush1, bush2, bush3]
@@ -65,7 +68,9 @@ func _ready():
 				spawn_grass_at(Vector3(world_x, y, world_z))
 			
 			z += spacing
+			numberOfGrass += 1
 		x += spacing
+	game_manager.set_number_of_grass(numberOfGrass)
 
 
 
