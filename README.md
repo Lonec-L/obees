@@ -4,7 +4,9 @@ Hardcore survival game where you ride a lawn mower and escape relentless swarms 
 
 ## How to play
 
-Space to drift, LMB to shoot.
+Press Space to drift and Left Mouse Button (LMB) to shoot.
+
+Mow all the lawn to win, but watch out for the bees — they will chase you and can kill you!
 
 ## To run on Mac OS:
 
