@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dphp6t6kaxx4h"]
+[gd_scene load_steps=10 format=3 uid="uid://dphp6t6kaxx4h"]
 
 [ext_resource type="Script" uid="uid://cesrqab4qj4wq" path="res://main.gd" id="1_272bh"]
 [ext_resource type="PackedScene" uid="uid://bstgvy8sibf11" path="res://world.tscn" id="1_ig7tw"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dttxk2asvutja" path="res://StunMinigameUI.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://ntngf0yq4iq" path="res://bee_spawner.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://x7igr55iafrb" path="res://bee.tscn" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://ck86d22726due" path="res://eurgh_audio_player.gd" id="7_kek77"]
 [ext_resource type="Script" uid="uid://dh0rgueqe5psd" path="res://Scripts/lawn_mowing_player.gd" id="10_efxa6"]
 
 [node name="game" type="Node3D"]
@@ -33,7 +34,8 @@ parameters/looping = true
 
 [node name="EUGH&Grunt&scaredPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h2yge")
-parameters/looping = true
+bus = &"Screams"
+script = ExtResource("7_kek77")
 
 [node name="BeeSpawner" parent="." instance=ExtResource("5_lquwl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.518738, -0.0424671, -0.354456)

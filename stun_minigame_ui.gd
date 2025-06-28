@@ -11,10 +11,6 @@ var maxProgress = 100
 
 func _ready():
 	lawn_mowing_player = get_tree().get_current_scene().get_node("LawnMowingPlayer2")
-	if lawn_mowing_player:
-		print("LAWN_MOWING_PLAYER FOUND")
-	else:
-		print("didnt find lawnMowingPlayer")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

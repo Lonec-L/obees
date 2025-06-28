@@ -36,6 +36,7 @@ enabled=PackedStringArray("res://addons/maaacks_menus_template/plugin.cfg")
 tallGrass=""
 gTrees=""
 player=""
+Bees=""
 
 [gui]
 

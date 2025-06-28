@@ -9,9 +9,16 @@ var has_chainsaw = false
 @onready var chainsaw_timer: Timer = $chainsaw_timer
 @export var mg_scene: PackedScene
 
+@onready var gruntingSFXPlayer: AudioStreamPlayer
+
 func _ready():
 	# Connect timeout signal
 	chainsaw_timer.timeout.connect(_on_chainsaw_timer_timeout)
+	gruntingSFXPlayer = get_tree().get_current_scene().get_node("EUGH&Grunt&scaredPlayer2")
+	if gruntingSFXPlayer:
+		print("GruntingSFXPlayer found")
+	else:
+		print("GruntingSFXPlayer not found")
 	
 	
 func get_chainsaw():
@@ -82,9 +89,14 @@ func extend_arm(pos: Vector3):
 
 
 func _on_area_3d_body_entered(body):
-	print(has_chainsaw)
 	if has_chainsaw == false:
 		return
 	if body.is_in_group("gTrees"):
 		print("tree")
 		body.fall()
+
+
+func _on_area_3d_body_entered_for_bees(body: Node3D) -> void:
+	if body.is_in_group("Bees"):
+		gruntingSFXPlayer.scared()
+		print("In area of beeeeees!")

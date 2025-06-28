@@ -592,7 +592,7 @@ _data = {
 &"flap_flap": SubResource("Animation_b1nx6")
 }
 
-[node name="bee" type="RigidBody3D"]
+[node name="bee" type="RigidBody3D" groups=["Bees"]]
 gravity_scale = 0.0
 script = ExtResource("2_v5qog")
 
