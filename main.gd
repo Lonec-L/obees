@@ -11,3 +11,4 @@ func _process(delta):
 	if Input.is_action_just_pressed("restart"):
 		var current_scene = get_tree().current_scene
 		get_tree().reload_current_scene()
+		Engine.time_scale = 1.0

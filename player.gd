@@ -12,6 +12,7 @@ var has_nos = false
 @onready var nos_timer: Timer = $nos_timer
 @onready var colision_timer: Timer = $colision_timer
 @export var mg_scene: PackedScene
+@onready var label: Label = $"../Label"
 
 var isAlive = true
 
@@ -129,6 +130,8 @@ func _on_area_3d_body_entered_for_bees(body: Node3D) -> void:
 		# gruntingSFXPlayer.scared()
 		print("YOU DEEEEED")
 		isAlive = false
+		Engine.time_scale = 0.0
+		label.visible = true
 	if body.is_in_group("Bees"):
 		gruntingSFXPlayer.scared()
 		
