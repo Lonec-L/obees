@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2o88rolbmdh4"]
+
+[ext_resource type="PackedScene" uid="uid://b2748seksf1xo" path="res://Assets/3D/NOS/NOS.glb" id="1_qvsnw"]
+
+[node name="NOS" instance=ExtResource("1_qvsnw")]
