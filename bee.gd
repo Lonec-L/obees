@@ -41,13 +41,17 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float):
 	if player:
-
 		# Bobbing on Y axis using time from OS.get_ticks_msec()
 		var time_sec = Time.get_ticks_msec() / 1000.0
 		var bob_y = base_height + sin(time_sec * bob_speed + bob_offset) * bob_amplitude
 
 		# Set final position with bobbing
 		var pos = global_transform.origin
+		var dist = (pos - player.global_transform.origin).length()
+		
+		if dist < 100:
+			pass
+
 		pos.y = bob_y
 		global_transform.origin = pos
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=4 uid="uid://c4u5f1i4yd76c"]
+[gd_scene load_steps=109 format=4 uid="uid://c4u5f1i4yd76c"]
 
 [ext_resource type="Script" uid="uid://bhuacmr3ppuwt" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://y8pd1gcgex0s" path="res://camera_3d.gd" id="2_onrkg"]
@@ -2223,5 +2223,3 @@ shape = SubResource("SphereShape3D_2hs0m")
 [node name="colision_timer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="body/tree_mower/Area3D" to="." method="_on_area_3d_body_entered"]
-[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered_for_bees"]

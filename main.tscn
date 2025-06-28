@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://c4u5f1i4yd76c" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://lk7wl7g82r11" path="res://Assets/Audio/Oh! Bees! - Main_theme.mp3" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dttxk2asvutja" path="res://StunMinigameUI.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://ntngf0yq4iq" path="res://bee_spawner.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" path="res://bee_spawner.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://x7igr55iafrb" path="res://bee.tscn" id="6_7mycd"]
-[ext_resource type="Script" uid="uid://ck86d22726due" path="res://eurgh_audio_player.gd" id="7_kek77"]
-[ext_resource type="Script" uid="uid://deem4d306708f" path="res://bee_swating_sfx_player_2.gd" id="8_4c57u"]
+[ext_resource type="Script" path="res://eurgh_audio_player.gd" id="7_kek77"]
+[ext_resource type="Script" path="res://bee_swating_sfx_player_2.gd" id="8_4c57u"]
 [ext_resource type="Script" uid="uid://dh0rgueqe5psd" path="res://Scripts/lawn_mowing_player.gd" id="10_efxa6"]
 
 [node name="game" type="Node3D"]
@@ -23,7 +23,6 @@ mg_scene = ExtResource("4_1bvp3")
 
 [node name="LawnMowingPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h2yge")
-bus = &"LawnMower"
 script = ExtResource("10_efxa6")
 
 [node name="BGMusicPlayer2" type="AudioStreamPlayer" parent="."]
@@ -35,12 +34,10 @@ parameters/looping = true
 
 [node name="EUGH&Grunt&scaredPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h2yge")
-bus = &"Screams"
 script = ExtResource("7_kek77")
 
 [node name="BeeSwatingSFXPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h2yge")
-bus = &"Screams"
 script = ExtResource("8_4c57u")
 
 [node name="BeeSpawner" parent="." instance=ExtResource("5_lquwl")]
