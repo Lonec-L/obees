@@ -15,8 +15,8 @@ run/main_scene="uid://c6k5nnpbypshi"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/image="uid://8jkcwrjk8gdu"
 config/icon="res://icon.svg"
-config/macos_native_icon="res://assets/icon.icns"
-config/windows_native_icon="res://assets/icon.ico"
+config/macos_native_icon="res://icon.icns"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
