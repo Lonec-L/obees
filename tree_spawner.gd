@@ -12,9 +12,9 @@ extends Node3D
 
 @export var tree_scale: float = 0.3
 
-@export var area_size: int = 300
-@export var spacing: int = 2
-@export var noise_threshold: float = 0.5
+@export var area_size: float = 300
+@export var spacing: float = 1.5
+@export var noise_threshold: float = 0.6
 
 var noise := FastNoiseLite.new()
 
@@ -32,6 +32,7 @@ func spawn_grass_at(pos: Vector3) -> void:
 	var grass_instance = grass.instantiate()
 	grass_instance.position = pos
 	grass_instance.scale = Vector3(0.1,0.1,0.1)
+	grass_instance.rotation_degrees.y = randf() * 360
 	add_child(grass_instance)
 
 func _ready():
@@ -40,8 +41,10 @@ func _ready():
 	noise.frequency = 0.5
 	noise.noise_type = FastNoiseLite.TYPE_SIMPLEX
 	  # Only spawn trees where noise is above this
-	for x in range(-area_size/2, area_size/2, spacing):
-		for z in range(-area_size/2, area_size/2, spacing):
+	var x = -area_size / 2.0
+	while x < area_size / 2.0:
+		var z = -area_size / 2.0
+		while z < area_size / 2.0:
 			var world_x = float(x)
 			var world_z = float(z)
 
@@ -52,6 +55,8 @@ func _ready():
 				spawn_tree_at(Vector3(world_x, y, world_z))
 			else:
 				spawn_grass_at(Vector3(world_x, y, world_z))
+			z += spacing
+		x += spacing
 
 
 

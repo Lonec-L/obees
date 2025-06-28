@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bh31cm3oqyb42" path="res://grass.tscn" id="8_wse8f"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_f3sb7"]
-size = Vector3(60, 1, 60)
+size = Vector3(300, 1, 300)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gbfbk"]
 size = Vector3(300, 1, 300)
@@ -20,11 +20,11 @@ size = Vector3(300, 1, 300)
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(5.5, 0, 0, 0, 1.1, 0, 0, 0, 5.5, 0, -0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_f3sb7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_gbfbk")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

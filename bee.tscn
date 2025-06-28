@@ -1,6 +1,13 @@
-[gd_scene load_steps=36 format=4 uid="uid://x7igr55iafrb"]
+[gd_scene load_steps=37 format=4 uid="uid://x7igr55iafrb"]
 
 [ext_resource type="Script" uid="uid://cnqb4xghu81nl" path="res://bee.gd" id="2_v5qog"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xww1r"]
+size = Vector3(4, 5, 2)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xww1r"]
+radius = 0.15
+height = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfueb"]
 
@@ -346,36 +353,48 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_r1vti")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_xww1r"]
-size = Vector3(8.23584, 3.71484, 1.81543)
-
-[node name="bee" type="Node3D"]
-transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, 0, 0)
+[node name="bee" type="RigidBody3D"]
+gravity_scale = 0.0
 script = ExtResource("2_v5qog")
 
-[node name="Tipalka D" type="MeshInstance3D" parent="."]
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 0, 0, 1, 0, 0.870771, 0)
+shape = SubResource("BoxShape3D_xww1r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+process_priority = 1
+transform = Transform3D(0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_xww1r")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, 0, 0)
+
+[node name="Tipalka D" type="MeshInstance3D" parent="Node3D"]
 mesh = SubResource("ArrayMesh_v3737")
 skeleton = NodePath("")
 
-[node name="Oka L" type="MeshInstance3D" parent="."]
+[node name="Oka L" type="MeshInstance3D" parent="Node3D"]
 mesh = SubResource("ArrayMesh_48kyx")
 skeleton = NodePath("")
 
-[node name="Oka D" type="MeshInstance3D" parent="."]
+[node name="Oka D" type="MeshInstance3D" parent="Node3D"]
 mesh = SubResource("ArrayMesh_8sm47")
 skeleton = NodePath("")
 
-[node name="Eyebrow L" type="MeshInstance3D" parent="."]
+[node name="Eyebrow L" type="MeshInstance3D" parent="Node3D"]
 mesh = SubResource("ArrayMesh_jdpfy")
 skeleton = NodePath("")
 
-[node name="Eyebrow D" type="MeshInstance3D" parent="."]
+[node name="Eyebrow D" type="MeshInstance3D" parent="Node3D"]
 mesh = SubResource("ArrayMesh_44fmo")
 skeleton = NodePath("")
 
-[node name="BonewingL" type="Node3D" parent="."]
+[node name="BonewingL" type="Node3D" parent="Node3D"]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="BonewingL"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Node3D/BonewingL"]
 bones/0/name = "Bone"
 bones/0/parent = -1
 bones/0/rest = Transform3D(0.153356, -0.820715, -0.550372, 0.694497, 0.485725, -0.530797, 0.702962, -0.300831, 0.644473, 0.699821, 0.811229, -0.531581)
@@ -384,13 +403,13 @@ bones/0/position = Vector3(0.699821, 0.811229, -0.531581)
 bones/0/rotation = Quaternion(0.0760901, -0.414697, 0.501346, 0.755572)
 bones/0/scale = Vector3(1, 1, 1)
 
-[node name="Wing L" type="MeshInstance3D" parent="BonewingL/Skeleton3D"]
+[node name="Wing L" type="MeshInstance3D" parent="Node3D/BonewingL/Skeleton3D"]
 mesh = SubResource("ArrayMesh_ld4o1")
 skin = SubResource("Skin_or0in")
 
-[node name="BonewingD" type="Node3D" parent="."]
+[node name="BonewingD" type="Node3D" parent="Node3D"]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="BonewingD"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Node3D/BonewingD"]
 bones/0/name = "Bone_2"
 bones/0/parent = -1
 bones/0/rest = Transform3D(0.750174, -0.660431, -0.032722, 0.595941, 0.696705, -0.39932, 0.286521, 0.280059, 0.916227, 0.75302, 0.746815, 0.487773)
@@ -399,13 +418,13 @@ bones/0/position = Vector3(0.75302, 0.746815, 0.487773)
 bones/0/rotation = Quaternion(0.18523, -0.0870404, 0.342545, 0.916939)
 bones/0/scale = Vector3(1, 1, 1)
 
-[node name="Wing D" type="MeshInstance3D" parent="BonewingD/Skeleton3D"]
+[node name="Wing D" type="MeshInstance3D" parent="Node3D/BonewingD/Skeleton3D"]
 mesh = SubResource("ArrayMesh_yg5to")
 skin = SubResource("Skin_rv3vb")
 
-[node name="Tipalkabone" type="Node3D" parent="."]
+[node name="Tipalkabone" type="Node3D" parent="Node3D"]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Tipalkabone"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Node3D/Tipalkabone"]
 bones/0/name = "Bone_3"
 bones/0/parent = -1
 bones/0/rest = Transform3D(-0.346489, 0.938054, 2.00917e-08, -0.938054, -0.346489, 2.93056e-09, 9.71059e-09, -1.78317e-08, 1, 3.05789, 0.131177, 0.0128419)
@@ -414,17 +433,17 @@ bones/0/position = Vector3(3.05789, 0.131177, 0.0128419)
 bones/0/rotation = Quaternion(-9.08037e-09, 4.54019e-09, -0.820515, 0.571625)
 bones/0/scale = Vector3(1, 1, 1)
 
-[node name="Usta" type="MeshInstance3D" parent="Tipalkabone/Skeleton3D"]
+[node name="Usta" type="MeshInstance3D" parent="Node3D/Tipalkabone/Skeleton3D"]
 mesh = SubResource("ArrayMesh_e1843")
 skin = SubResource("Skin_liaai")
 
-[node name="Armature" type="Node3D" parent="."]
+[node name="Armature" type="Node3D" parent="Node3D"]
 
-[node name="Cone" type="MeshInstance3D" parent="Armature"]
+[node name="Cone" type="MeshInstance3D" parent="Node3D/Armature"]
 mesh = SubResource("ArrayMesh_2k52q")
 skeleton = NodePath("")
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Armature"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Node3D/Armature"]
 bones/0/name = "Bone_4"
 bones/0/parent = -1
 bones/0/rest = Transform3D(-0.477549, -0.878605, 1.65112e-08, 0.878605, -0.477549, -4.00733e-08, 4.30935e-08, -4.63018e-09, 1, -1.55091, -0.15096, -0.0260958)
@@ -433,18 +452,12 @@ bones/0/position = Vector3(-1.55091, -0.15096, -0.0260958)
 bones/0/rotation = Quaternion(1.73366e-08, -1.30025e-08, 0.85952, 0.511102)
 bones/0/scale = Vector3(1, 1, 1)
 
-[node name="Mball_002" type="MeshInstance3D" parent="."]
+[node name="Mball_002" type="MeshInstance3D" parent="Node3D"]
 mesh = SubResource("ArrayMesh_vc5il")
 skeleton = NodePath("")
 
-[node name="Tipalka" type="MeshInstance3D" parent="."]
+[node name="Tipalka" type="MeshInstance3D" parent="Node3D"]
 mesh = SubResource("ArrayMesh_knxlk")
 skeleton = NodePath("")
-
-[node name="Area3D" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.362061, 1.35742, 0.0717773)
-shape = SubResource("BoxShape3D_xww1r")
 
 [connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]

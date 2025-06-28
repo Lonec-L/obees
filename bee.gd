@@ -4,7 +4,7 @@ var player = null
 @export var speed = 5
 @export var target_offset_range: float = 5.0
 
-var base_height: float
+@export var base_height: float = randf_range(2,3)
 var bob_amplitude: float = 0.5
 var bob_speed: float = 5
 var bob_offset: float = 0.0
@@ -13,8 +13,9 @@ var target_offset: Vector3
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = get_parent().get_node("player")
-	base_height = global_transform.origin.y
 	bob_offset = randf() * PI * 2
+	
+	global_position.y = base_height
 	
 	target_offset = Vector3(
 		randf_range(-target_offset_range, target_offset_range),
@@ -50,6 +51,7 @@ func _physics_process(delta: float):
 
 
 func _on_area_3d_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT and global_transform.origin.distance_to(player.global_transform.origin) <= 20:
-		print("Attacked the B")
-		queue_free()  # "Smack" — remove the bee
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if global_transform.origin.distance_to(player.global_transform.origin) <= 20:
+			print("Attacked the B")
+			queue_free()

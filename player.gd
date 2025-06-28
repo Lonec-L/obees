@@ -4,6 +4,7 @@ const SPEED = 10.0              # Constant forward speed
 const TURN_SPEED = 1.0         # How fast the player rotates (adjust as needed)
 var drift_strength = 0
 var movement_enabled: bool = true
+var _last_drift_dir = 0
 
 func _physics_process(delta):
 	
@@ -11,6 +12,9 @@ func _physics_process(delta):
 		return
 	# Rotate left/right using input
 	var turn_input = Input.get_action_strength("ui_left") - Input.get_action_strength("ui_right")
+	if _last_drift_dir != turn_input:
+		drift_strength = 0
+	_last_drift_dir = turn_input
 	var drift_input = Input.get_action_strength( "drift")
 	rotation.y += turn_input * (TURN_SPEED + 0.4*drift_input) * delta
 	
@@ -22,9 +26,10 @@ func _physics_process(delta):
 	var forward_direction = -transform.basis.z.normalized()
 	
 	var drift_direction = drift_input * turn_input * transform.basis.x.normalized()
+	
 	velocity = (4*drift_direction*drift_strength + forward_direction).normalized() * SPEED
 	
-	
+	velocity -= transform.basis.y.normalized()*3
 		
 	move_and_slide()
 	
