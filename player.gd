@@ -5,9 +5,33 @@ const TURN_SPEED = 1.0         # How fast the player rotates (adjust as needed)
 var drift_strength = 0
 var movement_enabled: bool = true
 var _last_drift_dir = 0
-
+var has_chainsaw = false
+@onready var chainsaw_timer: Timer = $chainsaw_timer
 @export var mg_scene: PackedScene
 
+func _ready():
+	# Connect timeout signal
+	chainsaw_timer.timeout.connect(_on_chainsaw_timer_timeout)
+	
+	
+func get_chainsaw():
+	if has_chainsaw:
+		if chainsaw_timer.time_left > 0:
+			var new_time = chainsaw_timer.time_left + 20
+			chainsaw_timer.stop()
+			chainsaw_timer.wait_time = new_time
+			chainsaw_timer.start()
+			return
+	print("get chainsaw")
+	has_chainsaw = true
+	$body/tree_mower.visible = true
+	chainsaw_timer.start(20)
+
+func _on_chainsaw_timer_timeout():
+	has_chainsaw = false
+	$body/tree_mower.visible = false
+	print("Chainsaw expired!")
+	
 func _physics_process(delta):
 	
 	if !movement_enabled:
@@ -33,7 +57,8 @@ func _physics_process(delta):
 	velocity -= transform.basis.y.normalized()*3
 		
 	move_and_slide()
-	
+	if has_chainsaw:
+		return
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
 		if collision.get_collider().is_in_group("gTrees") && movement_enabled:
@@ -53,3 +78,13 @@ func extend_arm(pos: Vector3):
 		$AnimationPlayer.play("slap right")
 	elif dot < 0:
 		$AnimationPlayer.play("slap left")
+	
+
+
+func _on_area_3d_body_entered(body):
+	print(has_chainsaw)
+	if has_chainsaw == false:
+		return
+	if body.is_in_group("gTrees"):
+		print("tree")
+		body.fall()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=4 uid="uid://cdxocssbyq0ba"]
+[gd_scene load_steps=26 format=4 uid="uid://cdxocssbyq0ba"]
 
 [ext_resource type="Texture2D" uid="uid://brixqm88k4cei" path="res://Assets/3D/bushes/bush3/bush3_bark_albedo.png" id="1_ftib7"]
+[ext_resource type="Script" uid="uid://bxj1tgqaoc58g" path="res://tree.gd" id="1_x5kkt"]
 [ext_resource type="Texture2D" uid="uid://bdl1c6syfpxkd" path="res://Assets/3D/bushes/bush3/bush3_bark_normal.png" id="2_ln2q5"]
 [ext_resource type="Texture2D" uid="uid://brfvwvqb6yen3" path="res://Assets/3D/bushes/bush1/textures/bush1_leafs_albedo.png" id="3_w8367"]
 [ext_resource type="Texture2D" uid="uid://d22g2guseblh3" path="res://Assets/3D/bushes/bush1/textures/bush1_leafs_normal.png" id="4_x5kkt"]
@@ -246,6 +247,7 @@ data = PackedVector3Array(0, 0.8314, -0.5556, 0.0746, 0.9239, -0.3754, 0, 0.9239
 
 [node name="bush3" type="StaticBody3D" groups=["gTrees"]]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("1_x5kkt")
 
 [node name="Cube_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.293669, 0, 0, 0, 0.293669, 0, 0, 0, 0.293669, -0.0273389, -0.493487, -0.0525451)
