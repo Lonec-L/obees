@@ -1,20 +1,29 @@
 # Attribution
-## Collaborators
 
-### Role
-Person 1  
-Person 2  
+## Programming
+
+David Rupreht
+Luka Lonec
+
+## Art and 3D design, TI/SM
+
+Jure Pospisil
+Matjaz Jenus
+
+## Sound design and music
+
+David Rupreht
+Jure Pospisil
+Matjaz Jenus
+
+## UI/UX, CI/CD, TA/RD, Photography
+
+Maj Alter
+
 [Person w/ Link]()  
 
-## Sourced
-### Asset Type
-#### Use Case
-Author: [Name]()  
-Source: [Domain : webpage.html]()  
-License: [License]()
-
-#### Godot Engine Logo
-Author: Andrea Calabró  
+### Godot Engine Logo
+Author: Andrea Calabro  
 Source: [godotengine.org : press](https://godotengine.org/press/)  
 License: [CC BY 4.0 International](https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.txt) 
 
