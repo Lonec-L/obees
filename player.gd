@@ -12,7 +12,8 @@ var has_nos = false
 @onready var nos_timer: Timer = $nos_timer
 @onready var colision_timer: Timer = $colision_timer
 @export var mg_scene: PackedScene
-@onready var label: Label = $"../Label"
+@onready var you_gonna_die_label: Label = $"../YouGonnaDieLabel"
+@onready var you_died_label: Label = $"../YouDiedLabel"
 
 var isAlive = true
 
@@ -30,6 +31,8 @@ func _ready():
 	
 func get_epipen():
 	$DeathTimer.stop()
+	you_gonna_die_label.visible = false
+	isAlive = true
 
 func get_nos():
 	if has_nos:
@@ -129,6 +132,7 @@ func _on_area_3d_body_entered(body):
 func _on_area_3d_body_entered_for_bees(body: Node3D) -> void:
 	if body.is_in_group("Bees") && isAlive:
 		isAlive = false
+		you_gonna_die_label.visible = true
 		$DeathTimer.start(20) # start death proces
 		print("You gonna DIEEEEE!")
 	if body.is_in_group("Bees"):
@@ -147,6 +151,7 @@ func _on_colision_timer_timeout():
 
 func _on_death_timer_timeout() -> void:
 	# gruntingSFXPlayer.scared()
+	you_gonna_die_label.visible = false
+	you_died_label.visible = true
 	print("YOU DEEEEED")
 	Engine.time_scale = 0.0
-	label.visible = true

@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 	currentProgress = clamp(currentProgress, 0, maxProgress)
 	if isActive && Input.is_action_just_pressed("mash_spacebar"):
 		print("Pressed SPACE!")
-		currentProgress += 50
+		currentProgress += 15
 		if currentProgress >= maxProgress:
 			end_minigame()
 

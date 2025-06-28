@@ -48,7 +48,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.518738, -0.0424671, -0.354
 bee_scene = ExtResource("6_7mycd")
 spawn_interval = 3.0
 
-[node name="Label" type="Label" parent="."]
+[node name="YouDiedLabel" type="Label" parent="."]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -59,3 +59,21 @@ theme_override_font_sizes/font_size = 76
 text = "Press R to Restart!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="YouGonnaDieLabel" type="Label" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 21
+text = "You got Stung and
+ will DIE 
+in 20 seconds!
+
+Get some 
+Epipen fast!"
+horizontal_alignment = 1
