@@ -1,12 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bstgvy8sibf11"]
+[gd_scene load_steps=9 format=3 uid="uid://bstgvy8sibf11"]
 
 [ext_resource type="Script" path="res://tree_spawner.gd" id="2_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://cneahpkhyi55s" path="res://tree1.tscn" id="3_036b0"]
 [ext_resource type="PackedScene" uid="uid://dvmwwr8f8hcmk" path="res://tree_2.tscn" id="4_dwbse"]
+[ext_resource type="PackedScene" uid="uid://c22nfogjp41qi" path="res://bush_1.tscn" id="5_gbfbk"]
 [ext_resource type="PackedScene" uid="uid://bonddkl5rpv5" path="res://tree_3.tscn" id="5_pkg7o"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
-size = Vector3(60, 1, 60)
+[ext_resource type="PackedScene" uid="uid://da5t1yunbq8jb" path="res://bush_2.tscn" id="6_ioo17"]
+[ext_resource type="PackedScene" uid="uid://cdxocssbyq0ba" path="res://bush_3.tscn" id="7_wse8f"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_f3sb7"]
 size = Vector3(60, 1, 60)
@@ -15,12 +15,8 @@ size = Vector3(60, 1, 60)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("BoxShape3D_gv5m4")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(5.5, 0, 0, 0, 1.1, 0, 0, 0, 5.5, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_f3sb7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -32,3 +28,6 @@ script = ExtResource("2_fj7yv")
 tree1 = ExtResource("3_036b0")
 tree2 = ExtResource("4_dwbse")
 tree3 = ExtResource("5_pkg7o")
+bush1 = ExtResource("5_gbfbk")
+bush2 = ExtResource("6_ioo17")
+bush3 = ExtResource("7_wse8f")
