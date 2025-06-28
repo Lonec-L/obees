@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://cdxocssbyq0ba" path="res://bush_3.tscn" id="7_wse8f"]
 [ext_resource type="PackedScene" uid="uid://bh31cm3oqyb42" path="res://grass.tscn" id="8_wse8f"]
 [ext_resource type="Texture2D" uid="uid://bncdl70qirai3" path="res://Assets/2D/sky_19_2k.png" id="9_ioo17"]
-[ext_resource type="PackedScene" path="res://nos.tscn" id="11_70uel"]
+[ext_resource type="PackedScene" uid="uid://c2o88rolbmdh4" path="res://nos.tscn" id="11_70uel"]
 [ext_resource type="PackedScene" uid="uid://cg7nk8fqxqwiw" path="res://chainsaw.tscn" id="11_ic0uy"]
-[ext_resource type="PackedScene" path="res://epipen.tscn" id="12_hiqwa"]
+[ext_resource type="PackedScene" uid="uid://b0ekrxe4tyd5p" path="res://epipen.tscn" id="12_hiqwa"]
 [ext_resource type="Script" uid="uid://kyecdr7dxyg4" path="res://game_manager.gd" id="12_k3n1d"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_f3sb7"]
