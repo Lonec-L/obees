@@ -16,6 +16,8 @@ extends Node3D
 @export var spacing: float = 1.5
 @export var noise_threshold: float = 0.6
 
+@export var starting_area: int = 20
+
 var noise := FastNoiseLite.new()
 
 func spawn_tree_at(pos: Vector3) -> void:
@@ -50,7 +52,7 @@ func _ready():
 
 			var value = noise.get_noise_2d(world_x, world_z)  # Range: [-1, 1]
 
-			if value > noise_threshold && (world_x * world_x + world_z * world_z) > 1000:
+			if value > noise_threshold && (abs(world_x) > starting_area ||  abs(world_z) > starting_area):
 				  # Replace with terrain height if needed
 				spawn_tree_at(Vector3(world_x, y, world_z))
 			else:
