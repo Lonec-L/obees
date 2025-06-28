@@ -41,3 +41,15 @@ func _physics_process(delta):
 			add_child(ui)
 			ui.start_stun_minigame()
 			movement_enabled = false
+
+func extend_arm(pos: Vector3):
+	var slap_dir = pos-global_position
+	
+	var local_right = global_transform.basis.x
+
+	var dot = slap_dir.normalized().dot(local_right)
+	
+	if dot > 0:
+		$AnimationPlayer.play("slap right")
+	elif dot < 0:
+		$AnimationPlayer.play("slap left")
