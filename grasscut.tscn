@@ -1,5 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://h4hvelnxb37h"]
 
-[ext_resource type="PackedScene" uid="uid://hfkeidltx7iy" path="res://Assets/3D/Grass/grasscut.glb" id="1_fudhd"]
+[ext_resource type="PackedScene" uid="uid://dyfwkvtpultm3" path="res://Assets/3D/Grass/grasscut.glb" id="1_fudhd"]
 
-[node name="grasscut" instance=ExtResource("1_fudhd")]
+[node name="grasscut" type="Node3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="grasscut" parent="." instance=ExtResource("1_fudhd")]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://cuvnlelr6u3wy"]
+
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_menus_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_peecx"]
+[ext_resource type="Script" uid="uid://biqwuguefc8fd" path="res://scenes/menus/main_menu/main_menu.gd" id="2_ub2bi"]
+[ext_resource type="PackedScene" uid="uid://b0n1f86xuycx4" path="res://scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_x31ro"]
+[ext_resource type="PackedScene" uid="uid://coiucm3fel0yy" path="res://scenes/credits/scrollable_credits.tscn" id="4_0jpat"]
+[ext_resource type="Texture2D" uid="uid://dnlr2frm7uo1m" path="res://assets/2D/assets2Ftask_01jyswqrepffws9st8768fqe6m2F1751068277_img_0.PNG" id="5_ub2bi"]
+
+[node name="MainMenu" instance=ExtResource("1_peecx")]
+script = ExtResource("2_ub2bi")
+options_packed_scene = ExtResource("3_x31ro")
+credits_packed_scene = ExtResource("4_0jpat")
+
+[node name="Assets2Ftask01Jyswqrepffws9St8768Fqe6m2f1751068277Img0" type="Sprite2D" parent="." index="0"]
+modulate = Color(0.423529, 0, 1, 1)
+position = Vector2(576, 440)
+scale = Vector2(1.17957, 0.476049)
+texture = ExtResource("5_ub2bi")
+
+[node name="BackgroundMusicPlayer" parent="." index="2"]
+bus = &"Master"
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
+text = "obees"
