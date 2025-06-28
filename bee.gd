@@ -56,4 +56,6 @@ func _on_area_3d_input_event(camera: Node, event: InputEvent, event_position: Ve
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if global_transform.origin.distance_to(player.global_transform.origin) <= 20:
 			print("Attacked the B")
+			var player = get_node("../player")
+			player.extend_arm(global_transform.origin)
 			queue_free()
