@@ -21,6 +21,7 @@ var isAlive = true
 
 func _ready():
 	# Connect timeout signal
+	isAlive = true
 	chainsaw_timer.timeout.connect(_on_chainsaw_timer_timeout)
 	gruntingSFXPlayer = get_tree().get_current_scene().get_node("EUGH&Grunt&scaredPlayer2")
 	beeSwattingSFXPlayer = get_tree().get_current_scene().get_node("BeeSwatingSFXPlayer2")
@@ -28,7 +29,7 @@ func _ready():
 	colision_timer.timeout.connect(_on_colision_timer_timeout)
 	
 func get_epipen():
-	pass
+	$DeathTimer.stop()
 
 func get_nos():
 	if has_nos:
@@ -127,11 +128,9 @@ func _on_area_3d_body_entered(body):
 
 func _on_area_3d_body_entered_for_bees(body: Node3D) -> void:
 	if body.is_in_group("Bees") && isAlive:
-		# gruntingSFXPlayer.scared()
-		print("YOU DEEEEED")
 		isAlive = false
-		Engine.time_scale = 0.0
-		label.visible = true
+		$DeathTimer.start(20) # start death proces
+		print("You gonna DIEEEEE!")
 	if body.is_in_group("Bees"):
 		gruntingSFXPlayer.scared()
 		
@@ -144,3 +143,10 @@ func end_game():
 func _on_colision_timer_timeout():
 	set_collision_layer_value(2, true)
 	set_collision_mask_value(2, true)
+
+
+func _on_death_timer_timeout() -> void:
+	# gruntingSFXPlayer.scared()
+	print("YOU DEEEEED")
+	Engine.time_scale = 0.0
+	label.visible = true
