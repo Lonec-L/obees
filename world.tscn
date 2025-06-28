@@ -13,14 +13,14 @@
 [ext_resource type="PackedScene" path="res://nos.tscn" id="11_70uel"]
 [ext_resource type="PackedScene" uid="uid://cg7nk8fqxqwiw" path="res://chainsaw.tscn" id="11_ic0uy"]
 [ext_resource type="PackedScene" path="res://epipen.tscn" id="12_hiqwa"]
-[ext_resource type="Script" path="res://game_manager.gd" id="12_k3n1d"]
+[ext_resource type="Script" uid="uid://kyecdr7dxyg4" path="res://game_manager.gd" id="12_k3n1d"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_f3sb7"]
 material = ExtResource("1_wse8f")
-size = Vector3(300, 1, 300)
+size = Vector3(500, 1, 500)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gbfbk"]
-size = Vector3(300, 1, 300)
+size = Vector3(500, 1, 500)
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_wse8f"]
 panorama = ExtResource("9_ioo17")

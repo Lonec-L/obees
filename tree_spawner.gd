@@ -81,7 +81,7 @@ func _ready():
 				spawn_grass_at(Vector3(world_x, y, world_z))
 			elif value > noise_threshold/2:
 				spawn_grass_at(Vector3(world_x, y, world_z))
-				if randf() < 0.02:
+				if randf() < 0.015:
 					spawn_powerup_at(Vector3(world_x, y, world_z))
 			z += spacing
 			numberOfGrass += 1
