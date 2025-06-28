@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r2ejd8v3xc6p"
-path.s3tc="res://.godot/imported/tree1_leafs_normal.png-9cdf60708387bb7a5df48669a23553f4.s3tc.ctex"
-path.etc2="res://.godot/imported/tree1_leafs_normal.png-9cdf60708387bb7a5df48669a23553f4.etc2.ctex"
+path.s3tc="res://.godot/imported/tree1_leafs_normal.png-7cbb8f1844988272bc0f8fa40234292b.s3tc.ctex"
+path.etc2="res://.godot/imported/tree1_leafs_normal.png-7cbb8f1844988272bc0f8fa40234292b.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/3D/trees/tree1/textures/tree1_leafs_normal.png"
-dest_files=["res://.godot/imported/tree1_leafs_normal.png-9cdf60708387bb7a5df48669a23553f4.s3tc.ctex", "res://.godot/imported/tree1_leafs_normal.png-9cdf60708387bb7a5df48669a23553f4.etc2.ctex"]
+source_file="res://Assets/3D/trees/tree1/textures/tree1_leafs_normal.png"
+dest_files=["res://.godot/imported/tree1_leafs_normal.png-7cbb8f1844988272bc0f8fa40234292b.s3tc.ctex", "res://.godot/imported/tree1_leafs_normal.png-7cbb8f1844988272bc0f8fa40234292b.etc2.ctex"]
 
 [params]
 

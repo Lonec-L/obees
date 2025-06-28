@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4rs8e4ylq7tl"
-path.s3tc="res://.godot/imported/tree1_leafs_albedo.png-8a4fe06ee619cf4050049f344246797e.s3tc.ctex"
-path.etc2="res://.godot/imported/tree1_leafs_albedo.png-8a4fe06ee619cf4050049f344246797e.etc2.ctex"
+uid="uid://cy1y2nkujvs68"
+path.s3tc="res://.godot/imported/hat_belt.png-42a8eaae72e910612535b4400bc3a9ab.s3tc.ctex"
+path.etc2="res://.godot/imported/hat_belt.png-42a8eaae72e910612535b4400bc3a9ab.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/3D/trees/tree1/textures/tree1_leafs_albedo.png"
-dest_files=["res://.godot/imported/tree1_leafs_albedo.png-8a4fe06ee619cf4050049f344246797e.s3tc.ctex", "res://.godot/imported/tree1_leafs_albedo.png-8a4fe06ee619cf4050049f344246797e.etc2.ctex"]
+source_file="res://Assets/3D/fatty/hat_belt.png"
+dest_files=["res://.godot/imported/hat_belt.png-42a8eaae72e910612535b4400bc3a9ab.s3tc.ctex", "res://.godot/imported/hat_belt.png-42a8eaae72e910612535b4400bc3a9ab.etc2.ctex"]
 
 [params]
 

@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7gwo6uessxxt"
-path.s3tc="res://.godot/imported/tree1_bark_normal.png-4a7887f6f88ab52ca57b9e497b26212e.s3tc.ctex"
-path.etc2="res://.godot/imported/tree1_bark_normal.png-4a7887f6f88ab52ca57b9e497b26212e.etc2.ctex"
+path.s3tc="res://.godot/imported/tree1_bark_normal.png-3ef471259cdf6e2d99d88242fbdb3d08.s3tc.ctex"
+path.etc2="res://.godot/imported/tree1_bark_normal.png-3ef471259cdf6e2d99d88242fbdb3d08.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/3D/trees/tree1/textures/tree1_bark_normal.png"
-dest_files=["res://.godot/imported/tree1_bark_normal.png-4a7887f6f88ab52ca57b9e497b26212e.s3tc.ctex", "res://.godot/imported/tree1_bark_normal.png-4a7887f6f88ab52ca57b9e497b26212e.etc2.ctex"]
+source_file="res://Assets/3D/trees/tree1/textures/tree1_bark_normal.png"
+dest_files=["res://.godot/imported/tree1_bark_normal.png-3ef471259cdf6e2d99d88242fbdb3d08.s3tc.ctex", "res://.godot/imported/tree1_bark_normal.png-3ef471259cdf6e2d99d88242fbdb3d08.etc2.ctex"]
 
 [params]
 
