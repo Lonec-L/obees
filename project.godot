@@ -15,6 +15,10 @@ run/main_scene="uid://dphp6t6kaxx4h"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[global_group]
+
+tallGrass=""
+
 [input]
 
 ui_left={

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c337r35elasa2"]
+
+[ext_resource type="PackedScene" uid="uid://cuhnjh4oqoi2j" path="res://Assets/3D/Bee/bee.glb" id="1_kl2qe"]
+[ext_resource type="Script" uid="uid://c0d5yqqcil21r" path="res://grass.gd" id="1_mw2ei"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kl2qe"]
+size = Vector3(1, 5.32324, 1)
+
+[node name="Grass" type="Node3D" groups=["tallGrass"]]
+script = ExtResource("1_mw2ei")
+
+[node name="bee" parent="." instance=ExtResource("1_kl2qe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21404, 1.19209e-07, 1.12281)
+
+[node name="Area3D" type="Area3D" parent="bee"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bee/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.16162, 0)
+shape = SubResource("BoxShape3D_kl2qe")
+
+[connection signal="area_entered" from="bee/Area3D" to="." method="_on_area_3d_area_entered"]
