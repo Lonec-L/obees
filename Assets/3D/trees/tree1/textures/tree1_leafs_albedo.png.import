@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4rs8e4ylq7tl"
-path.s3tc="res://.godot/imported/tree1_leafs_albedo.png-8a4fe06ee619cf4050049f344246797e.s3tc.ctex"
-path.etc2="res://.godot/imported/tree1_leafs_albedo.png-8a4fe06ee619cf4050049f344246797e.etc2.ctex"
+path.s3tc="res://.godot/imported/tree1_leafs_albedo.png-67eecfb511aebb1ab091157e0e386565.s3tc.ctex"
+path.etc2="res://.godot/imported/tree1_leafs_albedo.png-67eecfb511aebb1ab091157e0e386565.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/3D/trees/tree1/textures/tree1_leafs_albedo.png"
-dest_files=["res://.godot/imported/tree1_leafs_albedo.png-8a4fe06ee619cf4050049f344246797e.s3tc.ctex", "res://.godot/imported/tree1_leafs_albedo.png-8a4fe06ee619cf4050049f344246797e.etc2.ctex"]
+source_file="res://assets/3D/trees/tree1/textures/tree1_leafs_albedo.png"
+dest_files=["res://.godot/imported/tree1_leafs_albedo.png-67eecfb511aebb1ab091157e0e386565.s3tc.ctex", "res://.godot/imported/tree1_leafs_albedo.png-67eecfb511aebb1ab091157e0e386565.etc2.ctex"]
 
 [params]
 

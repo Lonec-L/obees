@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b0f0jdu01la42"
-path="res://.godot/imported/fatty.glb-63149f9c2fb6bcc7d360f22cbe8110bc.scn"
+path="res://.godot/imported/fatty.glb-3916504a78cc2b43a7485b8f83a93f68.scn"
 
 [deps]
 
-source_file="res://Assets/3D/fatty/fatty.glb"
-dest_files=["res://.godot/imported/fatty.glb-63149f9c2fb6bcc7d360f22cbe8110bc.scn"]
+source_file="res://assets/3D/fatty/fatty.glb"
+dest_files=["res://.godot/imported/fatty.glb-3916504a78cc2b43a7485b8f83a93f68.scn"]
 
 [params]
 

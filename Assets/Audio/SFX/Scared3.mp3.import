@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dhp8c3c86jsxm"
-path="res://.godot/imported/Scared3.mp3-a71bf45dac74c0ae43e6ed894df95e5a.mp3str"
+path="res://.godot/imported/Scared3.mp3-931ae782b76c20d62849fe2b52ac42e3.mp3str"
 
 [deps]
 
-source_file="res://Assets/Audio/SFX/Scared3.mp3"
-dest_files=["res://.godot/imported/Scared3.mp3-a71bf45dac74c0ae43e6ed894df95e5a.mp3str"]
+source_file="res://assets/Audio/SFX/Scared3.mp3"
+dest_files=["res://.godot/imported/Scared3.mp3-931ae782b76c20d62849fe2b52ac42e3.mp3str"]
 
 [params]
 

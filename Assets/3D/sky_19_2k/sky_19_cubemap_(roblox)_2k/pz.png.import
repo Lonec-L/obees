@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx0e17hyrp0ha"
-path="res://.godot/imported/pz.png-99c7d48254dc2e982fe6460d9cb5da9b.ctex"
+path="res://.godot/imported/pz.png-399ea01e5f42589b5b57c0376ca27661.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3D/sky_19_2k/sky_19_cubemap_(roblox)_2k/pz.png"
-dest_files=["res://.godot/imported/pz.png-99c7d48254dc2e982fe6460d9cb5da9b.ctex"]
+source_file="res://assets/3D/sky_19_2k/sky_19_cubemap_(roblox)_2k/pz.png"
+dest_files=["res://.godot/imported/pz.png-399ea01e5f42589b5b57c0376ca27661.ctex"]
 
 [params]
 

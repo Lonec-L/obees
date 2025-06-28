@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dqidrwcj274pa"
-path="res://.godot/imported/epipen.glb-e9c33b8aa5e0dafaf7989b9bed0d557c.scn"
+path="res://.godot/imported/epipen.glb-3c09c044b158b746538a8dfbf1768b39.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Epipen/epipen.glb"
-dest_files=["res://.godot/imported/epipen.glb-e9c33b8aa5e0dafaf7989b9bed0d557c.scn"]
+source_file="res://assets/3D/Epipen/epipen.glb"
+dest_files=["res://.godot/imported/epipen.glb-3c09c044b158b746538a8dfbf1768b39.scn"]
 
 [params]
 

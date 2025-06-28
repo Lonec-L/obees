@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://oep8voeceapb"
-path="res://.godot/imported/wood_planks_12_ambient_occlusion_1k.png-d562d66591b763d8aa88252c75a13a07.ctex"
+path="res://.godot/imported/wood_planks_12_ambient_occlusion_1k.png-a9190542fff1ec0ed3a6cf8e4e03c502.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3D/fence/wood_planks_12_1k/wood_planks_12_ambient_occlusion_1k.png"
-dest_files=["res://.godot/imported/wood_planks_12_ambient_occlusion_1k.png-d562d66591b763d8aa88252c75a13a07.ctex"]
+source_file="res://assets/3D/fence/wood_planks_12_1k/wood_planks_12_ambient_occlusion_1k.png"
+dest_files=["res://.godot/imported/wood_planks_12_ambient_occlusion_1k.png-a9190542fff1ec0ed3a6cf8e4e03c502.ctex"]
 
 [params]
 

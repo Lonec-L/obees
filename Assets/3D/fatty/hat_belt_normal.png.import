@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbfqfstl0omhg"
-path.s3tc="res://.godot/imported/hat_belt_normal.png-3dbaddfdf7be2f34f70fc45db792fc52.s3tc.ctex"
-path.etc2="res://.godot/imported/hat_belt_normal.png-3dbaddfdf7be2f34f70fc45db792fc52.etc2.ctex"
+path.s3tc="res://.godot/imported/hat_belt_normal.png-33ce5ef15f429754c19efb7dd12b74a4.s3tc.ctex"
+path.etc2="res://.godot/imported/hat_belt_normal.png-33ce5ef15f429754c19efb7dd12b74a4.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/3D/fatty/hat_belt_normal.png"
-dest_files=["res://.godot/imported/hat_belt_normal.png-3dbaddfdf7be2f34f70fc45db792fc52.s3tc.ctex", "res://.godot/imported/hat_belt_normal.png-3dbaddfdf7be2f34f70fc45db792fc52.etc2.ctex"]
+source_file="res://assets/3D/fatty/hat_belt_normal.png"
+dest_files=["res://.godot/imported/hat_belt_normal.png-33ce5ef15f429754c19efb7dd12b74a4.s3tc.ctex", "res://.godot/imported/hat_belt_normal.png-33ce5ef15f429754c19efb7dd12b74a4.etc2.ctex"]
 
 [params]
 

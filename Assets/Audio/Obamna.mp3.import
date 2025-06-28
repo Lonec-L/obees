@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://djn0vff0qgavr"
-path="res://.godot/imported/Obamna.mp3-8e8bb6a627dfd55042be64a63b6daa1d.mp3str"
+path="res://.godot/imported/Obamna.mp3-6c609057876336c19c9af6c0e13e3091.mp3str"
 
 [deps]
 
-source_file="res://Assets/Audio/Obamna.mp3"
-dest_files=["res://.godot/imported/Obamna.mp3-8e8bb6a627dfd55042be64a63b6daa1d.mp3str"]
+source_file="res://assets/Audio/Obamna.mp3"
+dest_files=["res://.godot/imported/Obamna.mp3-6c609057876336c19c9af6c0e13e3091.mp3str"]
 
 [params]
 

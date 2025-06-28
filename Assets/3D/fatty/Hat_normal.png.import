@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crh6c2wvmgat6"
-path.s3tc="res://.godot/imported/Hat_normal.png-dc2aa31aec21ef536444f908505ffa86.s3tc.ctex"
-path.etc2="res://.godot/imported/Hat_normal.png-dc2aa31aec21ef536444f908505ffa86.etc2.ctex"
+path.s3tc="res://.godot/imported/Hat_normal.png-eed61f5c8f53a9eae92d29c1d0dd61bb.s3tc.ctex"
+path.etc2="res://.godot/imported/Hat_normal.png-eed61f5c8f53a9eae92d29c1d0dd61bb.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/3D/fatty/Hat_normal.png"
-dest_files=["res://.godot/imported/Hat_normal.png-dc2aa31aec21ef536444f908505ffa86.s3tc.ctex", "res://.godot/imported/Hat_normal.png-dc2aa31aec21ef536444f908505ffa86.etc2.ctex"]
+source_file="res://assets/3D/fatty/Hat_normal.png"
+dest_files=["res://.godot/imported/Hat_normal.png-eed61f5c8f53a9eae92d29c1d0dd61bb.s3tc.ctex", "res://.godot/imported/Hat_normal.png-eed61f5c8f53a9eae92d29c1d0dd61bb.etc2.ctex"]
 
 [params]
 

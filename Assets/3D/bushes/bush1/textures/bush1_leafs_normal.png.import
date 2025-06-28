@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d22g2guseblh3"
-path.s3tc="res://.godot/imported/bush1_leafs_normal.png-241a26113656d24ce34df610d7c553e2.s3tc.ctex"
-path.etc2="res://.godot/imported/bush1_leafs_normal.png-241a26113656d24ce34df610d7c553e2.etc2.ctex"
+path.s3tc="res://.godot/imported/bush1_leafs_normal.png-553040c4dafe1de6fabd8ca3c99241f2.s3tc.ctex"
+path.etc2="res://.godot/imported/bush1_leafs_normal.png-553040c4dafe1de6fabd8ca3c99241f2.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/3D/bushes/bush1/textures/bush1_leafs_normal.png"
-dest_files=["res://.godot/imported/bush1_leafs_normal.png-241a26113656d24ce34df610d7c553e2.s3tc.ctex", "res://.godot/imported/bush1_leafs_normal.png-241a26113656d24ce34df610d7c553e2.etc2.ctex"]
+source_file="res://assets/3D/bushes/bush1/textures/bush1_leafs_normal.png"
+dest_files=["res://.godot/imported/bush1_leafs_normal.png-553040c4dafe1de6fabd8ca3c99241f2.s3tc.ctex", "res://.godot/imported/bush1_leafs_normal.png-553040c4dafe1de6fabd8ca3c99241f2.etc2.ctex"]
 
 [params]
 

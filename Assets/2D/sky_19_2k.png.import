@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bncdl70qirai3"
-path.s3tc="res://.godot/imported/sky_19_2k.png-b3e3693c30113f78dc8d83e551bab500.s3tc.ctex"
-path.etc2="res://.godot/imported/sky_19_2k.png-b3e3693c30113f78dc8d83e551bab500.etc2.ctex"
+path.s3tc="res://.godot/imported/sky_19_2k.png-60f63870b57bfda22141cc5815a97c27.s3tc.ctex"
+path.etc2="res://.godot/imported/sky_19_2k.png-60f63870b57bfda22141cc5815a97c27.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/sky_19_2k.png"
-dest_files=["res://.godot/imported/sky_19_2k.png-b3e3693c30113f78dc8d83e551bab500.s3tc.ctex", "res://.godot/imported/sky_19_2k.png-b3e3693c30113f78dc8d83e551bab500.etc2.ctex"]
+source_file="res://assets/2D/sky_19_2k.png"
+dest_files=["res://.godot/imported/sky_19_2k.png-60f63870b57bfda22141cc5815a97c27.s3tc.ctex", "res://.godot/imported/sky_19_2k.png-60f63870b57bfda22141cc5815a97c27.etc2.ctex"]
 
 [params]
 
