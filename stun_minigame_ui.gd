@@ -43,5 +43,6 @@ func end_minigame():
 	player.global_transform.origin += forward
 	lawn_mowing_player.should_resume_mid_after_end = true
 	lawn_mowing_player.mower_boot_up
+	player.end_game()
 	queue_free()
 	# Call function in player to enable it's movement

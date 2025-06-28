@@ -6,7 +6,11 @@ var drift_strength = 0
 var movement_enabled: bool = true
 var _last_drift_dir = 0
 var has_chainsaw = false
+var has_nos = false
+
 @onready var chainsaw_timer: Timer = $chainsaw_timer
+@onready var nos_timer: Timer = $nos_timer
+@onready var colision_timer: Timer = $colision_timer
 @export var mg_scene: PackedScene
 
 var isAlive = true
@@ -19,7 +23,28 @@ func _ready():
 	chainsaw_timer.timeout.connect(_on_chainsaw_timer_timeout)
 	gruntingSFXPlayer = get_tree().get_current_scene().get_node("EUGH&Grunt&scaredPlayer2")
 	beeSwattingSFXPlayer = get_tree().get_current_scene().get_node("BeeSwatingSFXPlayer2")
+	nos_timer.timeout.connect(_on_nos_timer_timeout)
+	colision_timer.timeout.connect(_on_colision_timer_timeout)
 	
+func get_epipen():
+	pass
+
+func get_nos():
+	if has_nos:
+		if nos_timer.time_left > 0:
+			var new_time = nos_timer.time_left + 20
+			nos_timer.stop()
+			nos_timer.wait_time = new_time
+			nos_timer.start()
+			return
+	print("get nos")
+	has_nos = true
+	nos_timer.start(20)
+
+func _on_nos_timer_timeout():
+	has_nos = false
+	print("Nos expired!")
+
 func get_chainsaw():
 	if has_chainsaw:
 		if chainsaw_timer.time_left > 0:
@@ -61,6 +86,9 @@ func _physics_process(delta):
 	velocity = (4*drift_direction*drift_strength + forward_direction).normalized() * SPEED
 	
 	velocity -= transform.basis.y.normalized()*3
+	
+	if has_nos:
+		velocity *= 1.5
 		
 	move_and_slide()
 	if has_chainsaw:
@@ -96,9 +124,20 @@ func _on_area_3d_body_entered(body):
 		print("tree")
 		body.fall()
 
-
 func _on_area_3d_body_entered_for_bees(body: Node3D) -> void:
 	if body.is_in_group("Bees") && isAlive:
 		# gruntingSFXPlayer.scared()
 		print("YOU DEEEEED")
 		isAlive = false
+	if body.is_in_group("Bees"):
+		gruntingSFXPlayer.scared()
+		
+func end_game():
+	print("set colision")
+	set_collision_layer_value(2, false)
+	set_collision_mask_value(2, false)
+	colision_timer.start(1)
+
+func _on_colision_timer_timeout():
+	set_collision_layer_value(2, true)
+	set_collision_mask_value(2, true)

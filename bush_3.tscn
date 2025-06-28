@@ -247,6 +247,8 @@ data = PackedVector3Array(0, 0.8314, -0.5556, 0.0746, 0.9239, -0.3754, 0, 0.9239
 
 [node name="bush3" type="StaticBody3D" groups=["gTrees"]]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_x5kkt")
 
 [node name="Cube_003" type="MeshInstance3D" parent="."]

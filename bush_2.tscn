@@ -210,6 +210,8 @@ data = PackedVector3Array(0, -0.9239, -0.3827, 0.1084, -0.8315, -0.5449, 0, -0.8
 
 [node name="bush2" type="StaticBody3D" groups=["gTrees"]]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_xuvhf")
 
 [node name="Cube_004" type="MeshInstance3D" parent="."]

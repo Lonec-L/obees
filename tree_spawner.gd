@@ -12,6 +12,10 @@ extends Node3D
 @onready var game_manager: Node2D = $"../GameManager"
 
 @export var chainsaw: PackedScene
+@export var nos: PackedScene
+@export var epipen: PackedScene
+
+var powerups
 
 @export var tree_scale: float = 0.3
 
@@ -42,14 +46,16 @@ func spawn_grass_at(pos: Vector3) -> void:
 	grass_instance.rotation_degrees.y = randf() * 360
 	add_child(grass_instance)
 	
-func spawn_chainsaw_at(pos: Vector3) -> void:
-	var chainsaw_instance = chainsaw.instantiate()
+func spawn_powerup_at(pos: Vector3) -> void:
+	var p = powerups[randi_range(0,2)]
+	var p_instance = p.instantiate()
 	pos.y = 1
-	chainsaw_instance.position = pos
-	chainsaw_instance.scale = Vector3(1,1,1)
-	add_child(chainsaw_instance)
+	p_instance.position = pos
+	p_instance.scale = Vector3(1,1,1)
+	add_child(p_instance)
 
 func _ready():
+	powerups = [epipen, chainsaw, nos]
 	var y = 0
 	noise.seed = randi()
 	noise.frequency = 0.5
@@ -75,8 +81,8 @@ func _ready():
 				spawn_grass_at(Vector3(world_x, y, world_z))
 			elif value > noise_threshold/2:
 				spawn_grass_at(Vector3(world_x, y, world_z))
-				if randf() < 0.01:
-					spawn_chainsaw_at(Vector3(world_x, y, world_z))
+				if randf() < 0.02:
+					spawn_powerup_at(Vector3(world_x, y, world_z))
 			z += spacing
 			numberOfGrass += 1
 		x += spacing

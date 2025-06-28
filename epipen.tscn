@@ -1,4 +1,6 @@
-[gd_scene load_steps=16 format=4 uid="uid://b0ekrxe4tyd5p"]
+[gd_scene load_steps=18 format=4 uid="uid://b0ekrxe4tyd5p"]
+
+[ext_resource type="Script" uid="uid://dsovbihihbvoa" path="res://epipen.gd" id="1_5usqw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w72fh"]
 
@@ -125,19 +127,33 @@ shadow_mesh = SubResource("ArrayMesh_6cvxq")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1k8d"]
 albedo_color = Color(1, 0.411765, 0, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5usqw"]
+size = Vector3(2, 10, 2)
+
 [node name="epipen" type="Node3D"]
+script = ExtResource("1_5usqw")
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 mesh = SubResource("ArrayMesh_fhqnn")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_a0cok")
 
 [node name="bottom" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 mesh = SubResource("ArrayMesh_vr0xm")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_46ut0")
 
 [node name="Cap" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 mesh = SubResource("ArrayMesh_mg7rq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_g1k8d")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_5usqw")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

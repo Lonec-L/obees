@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bstgvy8sibf11"]
+[gd_scene load_steps=20 format=3 uid="uid://bstgvy8sibf11"]
 
 [ext_resource type="Material" uid="uid://8rru2wn8bdv7" path="res://Assets/2D/Textures_generic/dirt.material" id="1_wse8f"]
 [ext_resource type="Script" uid="uid://ecw2laprvp06" path="res://tree_spawner.gd" id="2_fj7yv"]
@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://cdxocssbyq0ba" path="res://bush_3.tscn" id="7_wse8f"]
 [ext_resource type="PackedScene" uid="uid://bh31cm3oqyb42" path="res://grass.tscn" id="8_wse8f"]
 [ext_resource type="Texture2D" uid="uid://bncdl70qirai3" path="res://Assets/2D/sky_19_2k.png" id="9_ioo17"]
+[ext_resource type="PackedScene" uid="uid://c2o88rolbmdh4" path="res://nos.tscn" id="11_70uel"]
 [ext_resource type="PackedScene" uid="uid://cg7nk8fqxqwiw" path="res://chainsaw.tscn" id="11_ic0uy"]
+[ext_resource type="PackedScene" uid="uid://b0ekrxe4tyd5p" path="res://epipen.tscn" id="12_hiqwa"]
 [ext_resource type="Script" path="res://game_manager.gd" id="12_k3n1d"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_f3sb7"]
@@ -59,6 +61,8 @@ bush2 = ExtResource("6_ioo17")
 bush3 = ExtResource("7_wse8f")
 grass = ExtResource("8_wse8f")
 chainsaw = ExtResource("11_ic0uy")
+nos = ExtResource("11_70uel")
+epipen = ExtResource("12_hiqwa")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_k3n1d")

@@ -1,9 +1,6 @@
 extends StaticBody3D
 
 func fall():
-	var collision_shape = $CollisionShape3D
-	if collision_shape:
-		collision_shape.set_disabled(true)
 	collision_layer = 0
 	collision_mask = 0
 

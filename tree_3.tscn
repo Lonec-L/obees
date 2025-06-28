@@ -197,6 +197,8 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fj42m")
 
 [node name="tree3" type="StaticBody3D" groups=["gTrees"]]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_dxamh")
 
 [node name="Cube_001" type="MeshInstance3D" parent="."]
