@@ -50,7 +50,7 @@ func _ready():
 
 			var value = noise.get_noise_2d(world_x, world_z)  # Range: [-1, 1]
 
-			if value > noise_threshold:
+			if value > noise_threshold && (world_x * world_x + world_z * world_z) > 1000:
 				  # Replace with terrain height if needed
 				spawn_tree_at(Vector3(world_x, y, world_z))
 			else:

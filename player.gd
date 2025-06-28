@@ -26,7 +26,6 @@ func _physics_process(delta):
 	var forward_direction = -transform.basis.z.normalized()
 	
 	var drift_direction = drift_input * turn_input * transform.basis.x.normalized()
-	
 	velocity = (4*drift_direction*drift_strength + forward_direction).normalized() * SPEED
 	
 	velocity -= transform.basis.y.normalized()*3
