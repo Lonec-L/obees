@@ -1,10 +1,10 @@
-[gd_scene load_steps=44 format=4 uid="uid://x7igr55iafrb"]
+[gd_scene load_steps=47 format=4 uid="uid://x7igr55iafrb"]
 
 [ext_resource type="Script" uid="uid://cnqb4xghu81nl" path="res://bee.gd" id="2_v5qog"]
 [ext_resource type="Material" uid="uid://bdb1hmefl1fsy" path="res://Assets/3D/Bee/black.tres" id="3_sdpr3"]
 [ext_resource type="Texture2D" uid="uid://bvk5xrdf1rg3n" path="res://Assets/3D/Bee/wingtex.res" id="4_sgn7r"]
 [ext_resource type="FastNoiseLite" uid="uid://ckspq16oh5o6j" path="res://Assets/3D/Bee/new_fast_noise_lite.tres" id="5_y8nj2"]
-[ext_resource type="Material" path="res://Assets/3D/Bee/bee.material" id="6_jalfw"]
+[ext_resource type="Material" uid="uid://bo3abpk20y5p3" path="res://Assets/3D/Bee/bee.material" id="6_jalfw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xww1r"]
 size = Vector3(4, 5, 4)
@@ -377,6 +377,69 @@ fill_to = Vector2(0.41453, 0.24359)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_awyb5"]
 albedo_texture = SubResource("GradientTexture2D_wiip6")
 
+[sub_resource type="Animation" id="Animation_b1nx6"]
+resource_name = "flap_flap"
+length = 0.5
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D/BonewingL/Node3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0997462, 0.202363, 0.300674, 0.401138, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -0.238517), Vector3(0, 0, -0.786131), Vector3(0, 0, -0.171339), Vector3(1.01098e-09, -0.373745, 0.158022), Vector3(0, 0, -0.171339), Vector3(0, 0, -0.238517)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node3D/BonewingD/Node3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0997462, 0.202363, 0.300674, 0.401138, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -0.0734609), Vector3(0, 0, -0.654359), Vector3(0, 0, 0.152106), Vector3(0, 0.429107, 0.348563), Vector3(0, 0, 0.152106), Vector3(0, 0, -0.0734609)]
+}
+
+[sub_resource type="Animation" id="Animation_sdpr3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D/BonewingL/Node3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.238517)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node3D/BonewingD/Node3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.0734609)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sgn7r"]
+_data = {
+&"RESET": SubResource("Animation_sdpr3"),
+&"flap_flap": SubResource("Animation_b1nx6")
+}
+
 [node name="bee" type="RigidBody3D"]
 gravity_scale = 0.0
 script = ExtResource("2_v5qog")
@@ -408,11 +471,6 @@ surface_material_override/0 = ExtResource("3_sdpr3")
 
 [node name="BonewingL" type="Node3D" parent="Node3D"]
 
-[node name="Wing L" type="MeshInstance3D" parent="Node3D/BonewingL"]
-mesh = SubResource("ArrayMesh_27my7")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_j87i2")
-
 [node name="Skeleton3D" type="Skeleton3D" parent="Node3D/BonewingL"]
 bones/0/name = "Bone"
 bones/0/parent = -1
@@ -422,12 +480,16 @@ bones/0/position = Vector3(0.773541, 0.691936, -0.550939)
 bones/0/rotation = Quaternion(0.0760901, -0.414697, 0.501346, 0.755572)
 bones/0/scale = Vector3(1, 1, 1)
 
-[node name="BonewingD" type="Node3D" parent="Node3D"]
+[node name="Node3D" type="Node3D" parent="Node3D/BonewingL"]
+transform = Transform3D(0.971689, 0.236261, 0, -0.236261, 0.971689, 0, 0, 0, 0.999999, 1.23294, 0.35798, 0)
 
-[node name="Wing D" type="MeshInstance3D" parent="Node3D/BonewingD"]
-mesh = SubResource("ArrayMesh_jwcv7")
+[node name="Wing L" type="MeshInstance3D" parent="Node3D/BonewingL/Node3D"]
+transform = Transform3D(0.999998, 0.00169295, 0, -0.00169295, 0.999998, 0, 0, 0, 1, -1.56414, -0.441193, 0)
+mesh = SubResource("ArrayMesh_27my7")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_k0ny8")
+surface_material_override/0 = SubResource("StandardMaterial3D_j87i2")
+
+[node name="BonewingD" type="Node3D" parent="Node3D"]
 
 [node name="Skeleton3D" type="Skeleton3D" parent="Node3D/BonewingD"]
 bones/0/name = "Bone_2"
@@ -437,6 +499,15 @@ bones/0/enabled = true
 bones/0/position = Vector3(0.769922, 0.768682, 0.505956)
 bones/0/rotation = Quaternion(0.18523, -0.0870405, 0.342545, 0.916939)
 bones/0/scale = Vector3(1, 1, 1)
+
+[node name="Node3D" type="Node3D" parent="Node3D/BonewingD"]
+transform = Transform3D(0.997303, 0.0733948, 0, -0.0733948, 0.997303, 0, 0, 0, 1, 0.952553, 0.745397, 0)
+
+[node name="Wing D" type="MeshInstance3D" parent="Node3D/BonewingD/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00753, -0.868915, 0)
+mesh = SubResource("ArrayMesh_jwcv7")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_k0ny8")
 
 [node name="Tipalkabone" type="Node3D" parent="Node3D"]
 
@@ -489,5 +560,11 @@ surface_material_override/0 = ExtResource("6_jalfw")
 mesh = SubResource("ArrayMesh_iehlm")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_awyb5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_sgn7r")
+}
+speed_scale = 2.0
 
 [connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]

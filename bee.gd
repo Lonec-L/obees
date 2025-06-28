@@ -22,6 +22,8 @@ func _ready() -> void:
 		randf_range(0.5 * -target_offset_range, 0.5 * target_offset_range),
 		randf_range(-target_offset_range, target_offset_range)
 	)
+	
+	$AnimationPlayer.play("flap_flap")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float):
