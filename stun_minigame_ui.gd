@@ -2,12 +2,19 @@ extends CanvasLayer
 
 @onready var progress_bar: ProgressBar = $VBoxContainer/ProgressBar
 @onready var label: Label = $VBoxContainer/Label
+@onready var lawn_mowing_player: AudioStreamPlayer
 
 var isActive = false
 
 var currentProgress = 0
 var maxProgress = 100
 
+func _ready():
+	lawn_mowing_player = get_tree().get_current_scene().get_node("LawnMowingPlayer2")
+	if lawn_mowing_player:
+		print("LAWN_MOWING_PLAYER FOUND")
+	else:
+		print("didnt find lawnMowingPlayer")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -28,6 +35,8 @@ func start_stun_minigame():
 	currentProgress = 0
 	progress_bar.value = 0
 	visible = true
+	lawn_mowing_player.should_resume_mid_after_end = false
+	lawn_mowing_player.stop_mower()
 
 func end_minigame():
 	isActive = false
@@ -36,5 +45,7 @@ func end_minigame():
 	player.movement_enabled = true
 	var forward = -player.transform.basis.z.normalized()
 	player.global_transform.origin += forward
+	lawn_mowing_player.should_resume_mid_after_end = true
+	lawn_mowing_player.mower_boot_up
 	queue_free()
 	# Call function in player to enable it's movement

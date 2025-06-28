@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dphp6t6kaxx4h"]
+[gd_scene load_steps=9 format=3 uid="uid://dphp6t6kaxx4h"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_272bh"]
+[ext_resource type="Script" uid="uid://cesrqab4qj4wq" path="res://main.gd" id="1_272bh"]
 [ext_resource type="PackedScene" uid="uid://bstgvy8sibf11" path="res://world.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c4u5f1i4yd76c" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://lk7wl7g82r11" path="res://Assets/Audio/Oh! Bees! - Main_theme.mp3" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dttxk2asvutja" path="res://StunMinigameUI.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://ntngf0yq4iq" path="res://bee_spawner.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://x7igr55iafrb" path="res://bee.tscn" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://dh0rgueqe5psd" path="res://Scripts/lawn_mowing_player.gd" id="10_efxa6"]
 
 [node name="game" type="Node3D"]
 script = ExtResource("1_272bh")
@@ -18,9 +19,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0175858, -9.53674e-07, -0.1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16415, 0)
 mg_scene = ExtResource("4_1bvp3")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="LawnMowingPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h2yge")
+script = ExtResource("10_efxa6")
+
+[node name="BGMusicPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h2yge")
+volume_db = 1.0
 autoplay = true
+bus = &"BGM"
+parameters/looping = true
+
+[node name="EUGH&Grunt&scaredPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h2yge")
 parameters/looping = true
 
 [node name="BeeSpawner" parent="." instance=ExtResource("5_lquwl")]
