@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c4u5f1i4yd76c" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://lk7wl7g82r11" path="res://Assets/Audio/Oh! Bees! - Main_theme.mp3" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dttxk2asvutja" path="res://StunMinigameUI.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://ntngf0yq4iq" path="res://bee_spawner.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" path="res://bee_spawner.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://x7igr55iafrb" path="res://bee.tscn" id="6_7mycd"]
 [ext_resource type="Script" uid="uid://dh0rgueqe5psd" path="res://Scripts/lawn_mowing_player.gd" id="10_efxa6"]
 
@@ -27,7 +27,6 @@ script = ExtResource("10_efxa6")
 stream = ExtResource("3_h2yge")
 volume_db = 1.0
 autoplay = true
-bus = &"BGM"
 parameters/looping = true
 
 [node name="EUGH&Grunt&scaredPlayer2" type="AudioStreamPlayer" parent="."]

@@ -11,7 +11,7 @@ size = Vector3(20, 5, 20)
 script = ExtResource("1_mw2ei")
 mid_grass_scene = ExtResource("2_2qnaq")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." groups=["tallGrass"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17055, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]

@@ -2199,7 +2199,7 @@ transform = Transform3D(-2.64413e-08, 0, 0.0583076, 0, 0.604905, 0, -0.604905, 0
 mesh = SubResource("ArrayMesh_b26j0")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="body/tree_mower"]
+[node name="Area3D" type="Area3D" parent="body/tree_mower" groups=["player"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="body/tree_mower/Area3D"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.895693, 0.833148)
