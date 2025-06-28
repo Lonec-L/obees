@@ -23,21 +23,24 @@ mg_scene = ExtResource("4_1bvp3")
 
 [node name="LawnMowingPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h2yge")
+bus = &"lawnmower"
 script = ExtResource("10_efxa6")
 
 [node name="BGMusicPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h2yge")
 volume_db = 1.0
 autoplay = true
-bus = &"BGM"
+bus = &"BGMusic"
 parameters/looping = true
 
 [node name="EUGH&Grunt&scaredPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h2yge")
+bus = &"screams"
 script = ExtResource("7_kek77")
 
 [node name="BeeSwatingSFXPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h2yge")
+bus = &"screams"
 script = ExtResource("8_4c57u")
 
 [node name="BeeSpawner" parent="." instance=ExtResource("5_lquwl")]
