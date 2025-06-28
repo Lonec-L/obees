@@ -10,6 +10,8 @@ var bob_amplitude: float = 0.5
 var bob_speed: float = 5
 var bob_offset: float = 0.0
 
+var hasBzzzdPlayer = false
+
 var target_offset: Vector3
 # Called when the node enters the scene tree for the first time.
 
@@ -24,7 +26,6 @@ var beeSwatSounds = [
 func _ready() -> void:	
 	randomize()
 	bee_sfx.stream = beeSwatSounds[randi() % beeSwatSounds.size()]
-	bee_sfx.play()
 	player = get_parent().get_node("player")
 	bob_offset = randf() * PI * 2
 	
@@ -49,7 +50,10 @@ func _physics_process(delta: float):
 		var pos = global_transform.origin
 		var dist = (pos - player.global_transform.origin).length()
 		
-		if dist < 100:
+		if dist < 30 && !hasBzzzdPlayer:
+			bee_sfx.play()
+			print("Boo niga")
+			hasBzzzdPlayer = true
 			pass
 
 		pos.y = bob_y
