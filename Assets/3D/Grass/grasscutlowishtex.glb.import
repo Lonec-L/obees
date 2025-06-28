@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b0f0jdu01la42"
-path="res://.godot/imported/fatty.glb-63149f9c2fb6bcc7d360f22cbe8110bc.scn"
+uid="uid://4j6u5dxssynp"
+path="res://.godot/imported/grasscutlowishtex.glb-62125448c008c58d9ff5731eadcc9b59.scn"
 
 [deps]
 
-source_file="res://Assets/3D/fatty/fatty.glb"
-dest_files=["res://.godot/imported/fatty.glb-63149f9c2fb6bcc7d360f22cbe8110bc.scn"]
+source_file="res://Assets/3D/Grass/grasscutlowishtex.glb"
+dest_files=["res://.godot/imported/grasscutlowishtex.glb-62125448c008c58d9ff5731eadcc9b59.scn"]
 
 [params]
 
