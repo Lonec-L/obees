@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://tcfao57r2wm5"
-path="res://.godot/imported/grass.glb-f6ddfb7aa4c3017c27cf3ab22cebce4b.scn"
+path="res://.godot/imported/grass.glb-5a13a8ab730fa041ca1dc85f5498f51e.scn"
 
 [deps]
 
 source_file="res://assets/3D/Grass/grass.glb"
-dest_files=["res://.godot/imported/grass.glb-f6ddfb7aa4c3017c27cf3ab22cebce4b.scn"]
+dest_files=["res://.godot/imported/grass.glb-5a13a8ab730fa041ca1dc85f5498f51e.scn"]
 
 [params]
 
@@ -18,6 +18,7 @@ nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true

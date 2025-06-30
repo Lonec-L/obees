@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b83tr1npo3aap"
-path="res://.godot/imported/Operating3.mp3-fa0501289000424d4ed7978c36365dd6.mp3str"
+path="res://.godot/imported/Operating3.mp3-dfa330b3d3e10478394a92fdc18d8622.mp3str"
 
 [deps]
 
 source_file="res://assets/Audio/Kosilnica/Operating3.mp3"
-dest_files=["res://.godot/imported/Operating3.mp3-fa0501289000424d4ed7978c36365dd6.mp3str"]
+dest_files=["res://.godot/imported/Operating3.mp3-dfa330b3d3e10478394a92fdc18d8622.mp3str"]
 
 [params]
 

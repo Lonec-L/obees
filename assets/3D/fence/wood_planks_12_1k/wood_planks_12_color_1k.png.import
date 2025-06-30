@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp62b32b6lcse"
-path="res://.godot/imported/wood_planks_12_color_1k.png-d0d379d37b76637c32c82f12caabc5f6.ctex"
+path="res://.godot/imported/wood_planks_12_color_1k.png-2dc909507f55830f29d93c8d492ed0ec.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/3D/fence/wood_planks_12_1k/wood_planks_12_color_1k.png"
-dest_files=["res://.godot/imported/wood_planks_12_color_1k.png-d0d379d37b76637c32c82f12caabc5f6.ctex"]
+dest_files=["res://.godot/imported/wood_planks_12_color_1k.png-2dc909507f55830f29d93c8d492ed0ec.ctex"]
 
 [params]
 

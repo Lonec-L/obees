@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dmbk67vuv8jft"
-path="res://.godot/imported/shutdownfinal.mp3-1a327a053496f1da6a96f759dd5adb7f.mp3str"
+path="res://.godot/imported/shutdownfinal.mp3-54920f1982e0c29f98471c925535a537.mp3str"
 
 [deps]
 
 source_file="res://assets/Audio/Kosilnica/shutdownfinal.mp3"
-dest_files=["res://.godot/imported/shutdownfinal.mp3-1a327a053496f1da6a96f759dd5adb7f.mp3str"]
+dest_files=["res://.godot/imported/shutdownfinal.mp3-54920f1982e0c29f98471c925535a537.mp3str"]
 
 [params]
 

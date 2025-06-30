@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brfvwvqb6yen3"
-path.s3tc="res://.godot/imported/bush1_leafs_albedo.png-1c1cb7fde5c6f1ad86a1c28e989dec86.s3tc.ctex"
-path.etc2="res://.godot/imported/bush1_leafs_albedo.png-1c1cb7fde5c6f1ad86a1c28e989dec86.etc2.ctex"
+path.s3tc="res://.godot/imported/bush1_leafs_albedo.png-591800f7262f3c7be9cf18faccfb81fb.s3tc.ctex"
+path.etc2="res://.godot/imported/bush1_leafs_albedo.png-591800f7262f3c7be9cf18faccfb81fb.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -13,7 +13,7 @@ metadata={
 [deps]
 
 source_file="res://assets/3D/bushes/bush1/textures/bush1_leafs_albedo.png"
-dest_files=["res://.godot/imported/bush1_leafs_albedo.png-1c1cb7fde5c6f1ad86a1c28e989dec86.s3tc.ctex", "res://.godot/imported/bush1_leafs_albedo.png-1c1cb7fde5c6f1ad86a1c28e989dec86.etc2.ctex"]
+dest_files=["res://.godot/imported/bush1_leafs_albedo.png-591800f7262f3c7be9cf18faccfb81fb.s3tc.ctex", "res://.godot/imported/bush1_leafs_albedo.png-591800f7262f3c7be9cf18faccfb81fb.etc2.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cy8dwox55w4lx"
-path="res://.godot/imported/tree_mower.glb-9ab4847d64d0c528c8a5b3cc65ff0035.scn"
+path="res://.godot/imported/tree_mower.glb-025475d9769500033176197fc4b9d2e0.scn"
 
 [deps]
 
 source_file="res://assets/3D/chainsaw_powerup/tree_mower.glb"
-dest_files=["res://.godot/imported/tree_mower.glb-9ab4847d64d0c528c8a5b3cc65ff0035.scn"]
+dest_files=["res://.godot/imported/tree_mower.glb-025475d9769500033176197fc4b9d2e0.scn"]
 
 [params]
 

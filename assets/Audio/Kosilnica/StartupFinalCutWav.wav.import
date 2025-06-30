@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b768plnm5htbf"
-path="res://.godot/imported/StartupFinalCutWav.wav-19b68dbdb2a8398e971fd1e8bc52a713.sample"
+path="res://.godot/imported/StartupFinalCutWav.wav-b940f380db024d99b8a5a0a44e82354a.sample"
 
 [deps]
 
 source_file="res://assets/Audio/Kosilnica/StartupFinalCutWav.wav"
-dest_files=["res://.godot/imported/StartupFinalCutWav.wav-19b68dbdb2a8398e971fd1e8bc52a713.sample"]
+dest_files=["res://.godot/imported/StartupFinalCutWav.wav-b940f380db024d99b8a5a0a44e82354a.sample"]
 
 [params]
 

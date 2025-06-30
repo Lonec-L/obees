@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bicvjo6i7q5lp"
-path="res://.godot/imported/GruntSFX2.mp3-b4bd059589d93bad330219c9e1358019.mp3str"
+path="res://.godot/imported/GruntSFX2.mp3-f0ebec02aa991c1391076b6e681403e0.mp3str"
 
 [deps]
 
 source_file="res://assets/Audio/SFX/GruntSFX2.mp3"
-dest_files=["res://.godot/imported/GruntSFX2.mp3-b4bd059589d93bad330219c9e1358019.mp3str"]
+dest_files=["res://.godot/imported/GruntSFX2.mp3-f0ebec02aa991c1391076b6e681403e0.mp3str"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bmnrb4vgmyf25"
-path="res://.godot/imported/EUGH1.mp3-423cafadd773e451597a8b342b50bdd6.mp3str"
+path="res://.godot/imported/EUGH1.mp3-1faaaa18fa6e11f50bb2b37bdef3d710.mp3str"
 
 [deps]
 
 source_file="res://assets/Audio/SFX/EUGH1.mp3"
-dest_files=["res://.godot/imported/EUGH1.mp3-423cafadd773e451597a8b342b50bdd6.mp3str"]
+dest_files=["res://.godot/imported/EUGH1.mp3-1faaaa18fa6e11f50bb2b37bdef3d710.mp3str"]
 
 [params]
 

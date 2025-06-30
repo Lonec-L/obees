@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cvfmynurkdwb1"
-path="res://.godot/imported/CrashSFX.mp3-f6b00273bdbb3132d2c1dc6c3703987d.mp3str"
+path="res://.godot/imported/CrashSFX.mp3-8f99f05324f40a2d2d1d5ec92d366e7d.mp3str"
 
 [deps]
 
 source_file="res://assets/Audio/SFX/CrashSFX.mp3"
-dest_files=["res://.godot/imported/CrashSFX.mp3-f6b00273bdbb3132d2c1dc6c3703987d.mp3str"]
+dest_files=["res://.godot/imported/CrashSFX.mp3-8f99f05324f40a2d2d1d5ec92d366e7d.mp3str"]
 
 [params]
 
