@@ -1,7 +1,7 @@
 extends AudioStreamPlayer
 
-var beeSwat1 = load("res://Assets/Audio/SFX/FlySwatSFX1.mp3")
-var beeSwat2 = load("res://Assets/Audio/SFX/FlySwatSFX2.mp3")
+var beeSwat1 = load("res://assets/Audio/SFX/FlySwatSFX1.mp3")
+var beeSwat2 = load("res://assets/Audio/SFX/FlySwatSFX2.mp3")
 
 @onready var bee_swat_player: AudioStreamPlayer = $"."
 

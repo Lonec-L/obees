@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://do2g45paq2120"]
 
-[ext_resource type="PackedScene" uid="uid://dubs5udccr7bm" path="res://Assets/3D/Grass/grasscutmiddle.glb" id="1_i57ri"]
+[ext_resource type="PackedScene" uid="uid://dubs5udccr7bm" path="res://assets/3D/Grass/grasscutmiddle.glb" id="1_i57ri"]
 [ext_resource type="Script" path="res://grasscutmiddle.gd" id="2_gjcdu"]
 [ext_resource type="PackedScene" uid="uid://h4hvelnxb37h" path="res://grasscut.tscn" id="3_2s0jp"]
 

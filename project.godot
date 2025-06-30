@@ -44,7 +44,7 @@ Bees=""
 [gui]
 
 theme/custom="uid://veuqbv3t6834"
-theme/custom_font="res://Assets/Fonts/Boxy-Bold.ttef"
+theme/custom_font="res://assets/Fonts/Boxy-Bold.ttef"
 
 [input]
 

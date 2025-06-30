@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c0d5yqqcil21r" path="res://grass.gd" id="1_mw2ei"]
 [ext_resource type="PackedScene" uid="uid://do2g45paq2120" path="res://grasscutmiddle.tscn" id="2_2qnaq"]
-[ext_resource type="PackedScene" uid="uid://c68cf1krtot6p" path="res://Assets/3D/Grass/grasslowpoly.glb" id="3_2qnaq"]
+[ext_resource type="PackedScene" uid="uid://c68cf1krtot6p" path="res://assets/3D/Grass/grasslowpoly.glb" id="3_2qnaq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kl2qe"]
 size = Vector3(20, 5, 20)

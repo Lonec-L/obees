@@ -19,9 +19,9 @@ var target_offset: Vector3
 @onready var bee_sfx: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 var beeSwatSounds = [
-	load("res://Assets/Audio/SFX/BzzSFX1.mp3"),
-	load("res://Assets/Audio/SFX/BzzSFX2.mp3"),
-	load("res://Assets/Audio/SFX/BzzSFX3.mp3")
+	load("res://assets/Audio/SFX/BzzSFX1.mp3"),
+	load("res://assets/Audio/SFX/BzzSFX2.mp3"),
+	load("res://assets/Audio/SFX/BzzSFX3.mp3")
 ]
 
 func _ready() -> void:	

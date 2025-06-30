@@ -1,10 +1,10 @@
 [gd_scene load_steps=21 format=4 uid="uid://dvmwwr8f8hcmk"]
 
-[ext_resource type="Texture2D" uid="uid://cuh24cmqevwqf" path="res://Assets/3D/trees/tree2/tree2_bark_albedo.png" id="1_2dr1h"]
+[ext_resource type="Texture2D" uid="uid://cuh24cmqevwqf" path="res://assets/3D/trees/tree2/tree2_bark_albedo.png" id="1_2dr1h"]
 [ext_resource type="Script" uid="uid://bxj1tgqaoc58g" path="res://tree.gd" id="1_nl0sb"]
-[ext_resource type="Texture2D" uid="uid://c3uxhp64cqcfk" path="res://Assets/3D/trees/tree2/tree2_bark_normal.png" id="2_nl0sb"]
-[ext_resource type="Texture2D" uid="uid://b4rs8e4ylq7tl" path="res://Assets/3D/trees/tree1/textures/tree1_leafs_albedo.png" id="3_28dkk"]
-[ext_resource type="Texture2D" uid="uid://r2ejd8v3xc6p" path="res://Assets/3D/trees/tree1/textures/tree1_leafs_normal.png" id="4_a1cwd"]
+[ext_resource type="Texture2D" uid="uid://c3uxhp64cqcfk" path="res://assets/3D/trees/tree2/tree2_bark_normal.png" id="2_nl0sb"]
+[ext_resource type="Texture2D" uid="uid://b4rs8e4ylq7tl" path="res://assets/3D/trees/tree1/textures/tree1_leafs_albedo.png" id="3_28dkk"]
+[ext_resource type="Texture2D" uid="uid://r2ejd8v3xc6p" path="res://assets/3D/trees/tree1/textures/tree1_leafs_normal.png" id="4_a1cwd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fmw65"]
 resource_name = "tree_bark"

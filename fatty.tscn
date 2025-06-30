@@ -1,9 +1,9 @@
 [gd_scene load_steps=91 format=4 uid="uid://chl3jsrap0fep"]
 
-[ext_resource type="Texture2D" uid="uid://clg3vibw562jr" path="res://Assets/3D/fatty/Hat.png" id="1_d1fiu"]
-[ext_resource type="Texture2D" uid="uid://crh6c2wvmgat6" path="res://Assets/3D/fatty/Hat_normal.png" id="2_ih4d5"]
-[ext_resource type="Texture2D" uid="uid://cy1y2nkujvs68" path="res://Assets/3D/fatty/hat_belt.png" id="3_v4o8e"]
-[ext_resource type="Texture2D" uid="uid://cbfqfstl0omhg" path="res://Assets/3D/fatty/hat_belt_normal.png" id="4_xo7pj"]
+[ext_resource type="Texture2D" uid="uid://clg3vibw562jr" path="res://assets/3D/fatty/Hat.png" id="1_d1fiu"]
+[ext_resource type="Texture2D" uid="uid://crh6c2wvmgat6" path="res://assets/3D/fatty/Hat_normal.png" id="2_ih4d5"]
+[ext_resource type="Texture2D" uid="uid://cy1y2nkujvs68" path="res://assets/3D/fatty/hat_belt.png" id="3_v4o8e"]
+[ext_resource type="Texture2D" uid="uid://cbfqfstl0omhg" path="res://assets/3D/fatty/hat_belt_normal.png" id="4_xo7pj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3erx5"]
 resource_name = "Hat"

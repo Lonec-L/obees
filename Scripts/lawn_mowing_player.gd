@@ -1,8 +1,8 @@
 extends AudioStreamPlayer
 
-var mowingStart = load("res://Assets/Audio/Kosilnica/Startup3.mp3")
-var mowingMid = load("res://Assets/Audio/Kosilnica/Operating3.mp3")
-var mowingEnd = load("res://Assets/Audio/Kosilnica/Shutdown3.mp3")
+var mowingStart = load("res://assets/Audio/Kosilnica/Startup3.mp3")
+var mowingMid = load("res://assets/Audio/Kosilnica/Operating3.mp3")
+var mowingEnd = load("res://assets/Audio/Kosilnica/Shutdown3.mp3")
 @onready var mower_player: AudioStreamPlayer = $"."
 var isMowingMidLooping = true
 var should_resume_mid_after_end = false
