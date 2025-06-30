@@ -27,8 +27,6 @@ var powerups
 
 var noise := FastNoiseLite.new()
 
-var numberOfGrass = 0
-
 func spawn_tree_at(pos: Vector3) -> void:
 	var tree_options = [tree1, tree2, tree3, bush1, bush2, bush3]
 	var chosen_tree_scene = tree_options[randi() % tree_options.size()]
@@ -45,6 +43,7 @@ func spawn_grass_at(pos: Vector3) -> void:
 	grass_instance.scale = Vector3(0.15,0.15,0.15)
 	grass_instance.rotation_degrees.y = randf() * 360
 	add_child(grass_instance)
+	game_manager.update_number_of_grass(1)
 	
 func spawn_powerup_at(pos: Vector3) -> void:
 	var p = powerups[randi_range(0,2)]
@@ -84,9 +83,7 @@ func _ready():
 				if randf() < 0.015:
 					spawn_powerup_at(Vector3(world_x, y, world_z))
 			z += spacing
-			numberOfGrass += 1
 		x += spacing
-	game_manager.set_number_of_grass(numberOfGrass)
 
 
 

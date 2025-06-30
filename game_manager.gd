@@ -1,7 +1,7 @@
 extends Node2D
 
 var count = 0
-var numberOfGrass
+var numberOfGrass = 0
 
 @onready var score_label: Label = $"../../ScoreLabel"
 
@@ -12,12 +12,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	score_label.text = str(count) + " / " + str(numberOfGrass / 2)
+	score_label.text = str(count) + " / " + str(numberOfGrass)
 
 func progress() -> void: 
 	count += 1
-	if count >= numberOfGrass / 2:
+	if count >= numberOfGrass:
 		get_tree().change_scene_to_file("res://scenes/credits/scrollable_credits.tscn")
 
-func set_number_of_grass(n: int) -> void:
-	numberOfGrass = n
+func update_number_of_grass(n: int) -> void:
+	numberOfGrass += n
